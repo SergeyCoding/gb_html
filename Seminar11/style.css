@@ -64,8 +64,7 @@ body {
 }
 
 .offer {
-    max-width: 1140px;
-    margin-top: 65px;
+    width: 1140px;
     margin: 65px auto 0;
 }
 
@@ -74,31 +73,6 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
-/* .offer__row1 div {
-    position: relative;
-}
-
-.offer__row1 h2 {
-    width: 100%;
-    color: #Fff;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 16px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
-    position: absolute;
-    top: 50%;
-    transform: translateY(-100%);
-}*/
-
-/* .offer__row1 h3 {
-    display: none;
-    position: absolute;
-} */
 
 .offer__group {
     position: relative;
@@ -113,8 +87,22 @@ body {
 }
 
 .offer__text {
+    font-family: Lato;
+    text-align: center;
+
     position: absolute;
     z-index: 100;
+}
+
+.offer__text h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFF;
+}
+
+.offer__text h3 {
+    font-size: 24px;
+    font-weight: 700;
     color: #F16D7F;
 }
 
@@ -125,11 +113,11 @@ body {
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0;
+    opacity: .5;
 }
 
 .offer__group:hover .offer__curtain {
-    opacity: .5;
+    opacity: .7;
 }
 
 .offer__row2 {
@@ -139,5 +127,83 @@ body {
 }
 
 .products {
-    margin-top: 96px;
+    min-width: 1140px;
+    margin: 96px auto 60px;
+
+    text-align: center;
+    font-weight: 400;
+}
+
+.products h1 {
+    color: #222;
+    font-size: 30px;
+}
+
+.products p {
+    margin-top: 6px;
+    color: #9F9F9F;
+    font-size: 14px;
+}
+
+.products__items {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.products__item {
+    width: 360px;
+    text-align: left;
+}
+
+.products__item h4 {
+    margin-top: 25px;
+    color: #000;
+    font-size: 13px;
+}
+
+.products__item p {
+    margin-top: 16px;
+    color: #5D5D5D;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.products__item h5 {
+    margin-top: 16px;
+    color: #F16D7F;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.products__item_background2 {
+    background-color: #F7E4E2;
+    width: 360px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products__button {
+    margin: 48px auto 0;
+    width: 212px;
+}
+
+.products__btn_text {
+    height: 48px;
+    border: 1px #FF6A6A solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products__btn_text p {
+    margin: 0;
+    display: block;
+    color: #F26376;
+    font-size: 16px;
 }
