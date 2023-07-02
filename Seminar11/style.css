@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #FFFFFF;
+    font-family: Lato;
+}
+
+.menu {
+    min-width: 1140px;
+    background-color: #222222;
+    height: 75px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu__search {
+    margin-left: 41px;
+}
+
+.header {
+    min-width: 1140px;
+    background-color: #F1E4E6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__brand {
+    min-width: 800px;
+    color: #222;
+    font-size: 48px;
+    font-weight: 900;
+
+
+    display: flex;
+}
+
+.header__brand h1 {
+    font-size: 48px;
+    margin-left: 16px;
+}
+
+.header__brand p {
+    color: #222;
+    font-size: 32px;
+    font-weight: 700;
+    margin-left: 16px;
+}
+
+.header__brand span {
+    color: #F16D7F;
+    font-style: 37px;
+}
+
+.offer {
+    max-width: 1140px;
+    margin-top: 65px;
+    margin: 65px auto 0;
+}
+
+.offer__row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .offer__row1 div {
+    position: relative;
+}
+
+.offer__row1 h2 {
+    width: 100%;
+    color: #Fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+}*/
+
+/* .offer__row1 h3 {
+    display: none;
+    position: absolute;
+} */
+
+.offer__group {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer__group img {
+    z-index: -1;
+}
+
+.offer__text {
+    position: absolute;
+    z-index: 100;
+    color: #F16D7F;
+}
+
+.offer__curtain {
+    position: absolute;
+    border: 1px black solid;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+}
+
+.offer__group:hover .offer__curtain {
+    opacity: .5;
+}
+
+.offer__row2 {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.products {
+    margin-top: 96px;
+}
