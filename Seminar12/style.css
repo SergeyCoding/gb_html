@@ -2,9 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-a {
     text-decoration: none;
 }
 
@@ -13,8 +10,12 @@ body {
     font-family: Lato;
 }
 
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
 .menu {
-    min-width: 1140px;
     background-color: #222222;
     height: 75px;
 
@@ -27,17 +28,28 @@ body {
     margin-left: 41px;
 }
 
+.menu__login {
+    margin-left: 25px;
+    margin-right: 42px;
+}
+
 .header {
-    min-width: 1140px;
     background-color: #F1E4E6;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
+.header__left {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+}
+
 .header__brand {
-    min-width: 800px;
+    width: 40%;
+    border-color: aqua;
     color: #222;
     font-size: 48px;
     font-weight: 900;
@@ -64,7 +76,7 @@ body {
 }
 
 .offer {
-    width: 1140px;
+    max-width: 1140px;
     margin: 65px auto 0;
 }
 
@@ -72,6 +84,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .offer__group {
@@ -84,6 +97,7 @@ body {
 
 .offer__group img {
     z-index: -1;
+    object-fit: cover;
 }
 
 .offer__text {
@@ -127,7 +141,7 @@ body {
 }
 
 .products {
-    min-width: 1140px;
+    width: 1140px;
     margin: 96px auto 60px;
 
     text-align: center;
@@ -206,4 +220,55 @@ body {
     display: block;
     color: #F26376;
     font-size: 16px;
+}
+
+@media (max-width: 1140px) and (min-width: 768px) {
+    .products {
+        max-width: 768px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    body {
+        min-width: 768px;
+    }
+
+    .header__left img {
+        width: 386px;
+        height: 386px;
+    }
+
+    .header__brand img {
+        width: 12px;
+        height: 92px;
+    }
+
+    .header__brand h1 {
+        font-size: 44px;
+        font-weight: 900;
+    }
+
+    .header__brand p {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .header__brand span {
+        color: #F16D7F;
+        font-style: 37px;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        display: none;
+    }
+
+    .offer {
+        display: none;
+    }
+
+    .products {
+        display: none;
+    }
 }
