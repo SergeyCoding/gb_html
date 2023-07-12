@@ -16,8 +16,8 @@ body {
 }
 
 .menu {
+    position: relative;
     background-color: #222222;
-
 }
 
 .menu__container {
@@ -32,6 +32,53 @@ body {
 
 .menu__search {
     margin-left: 41px;
+}
+
+.menu__dropdown {
+    display: inline-block;
+}
+
+.menu__dropdown:hover .menu__board {
+    display: block;
+}
+
+.menu__board {
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 0;
+
+    padding: 32px;
+
+    width: 232px;
+    background: #FFF;
+}
+
+.menu__board h2 {
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.menu__board h3 {
+    margin-top: 20px;
+    color: #F16D7F;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.menu__board ul {
+    list-style-type: none;
+}
+
+.menu__board li {
+    margin-left: 22px;
+    margin-top: 11px;
+    color: #6F6E6E;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
 }
 
 .menu__login {
