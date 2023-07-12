@@ -47,6 +47,7 @@ body {
     position: absolute;
     top: 75px;
     right: 0;
+    z-index: 100;
 
     padding: 32px;
 
@@ -515,6 +516,40 @@ body {
     }
 }
 
+@media (max-width: 1140px) {
+
+    .footer__items {
+        height: auto;
+        width: 360px;
+        display: block;
+        padding: .1px 0 64px;
+    }
+
+    .footer__item {
+        margin-top: 49px;
+    }
+
+    .footer__subscribe {
+        height: 693px;
+    }
+
+    .footer__subscribe_transp {
+        display: block;
+    }
+
+    .footer__subscribe_info {
+        margin: 64px auto 0;
+    }
+
+    .footer__subscribe_right {
+        margin: 75px auto 0;
+    }
+
+    .footer__subscribe_form {
+        margin-top: 27px;
+    }
+}
+
 @media (max-width: 1024px) and (min-width: 768px) {
     body {
         min-width: 768px;
@@ -639,5 +674,9 @@ body {
     .products__img2 {
         height: 80%;
         height: auto;
+    }
+
+    .footer__subscribe {
+        height: 550px;
     }
 }
