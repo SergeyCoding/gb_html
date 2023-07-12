@@ -583,7 +583,7 @@ body {
 
 @media (max-width: 767px) {
     body {
-        min-width: 320px;
+        min-width: 372px;
     }
 
     .menu {
@@ -650,7 +650,7 @@ body {
     }
 
     .products {
-        max-width: 320px;
+        max-width: 372px;
     }
 
     .products__items {
@@ -662,21 +662,15 @@ body {
         width: 100%;
     }
 
-    .products__img {
-        width: 100%;
-        height: auto;
-    }
-
-    .products__item_background2 {
-        width: 100%;
-    }
-
-    .products__img2 {
-        height: 80%;
-        height: auto;
-    }
-
     .footer__subscribe {
         height: 550px;
     }
+
+    .footer__socials {
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+
 }
