@@ -252,10 +252,6 @@ body {
 
         position: relative;
 
-        &:hover &__cart {
-            display: flex;
-        }
-
         & h4 {
             margin-top: 25px;
             color: #000;
@@ -275,6 +271,19 @@ body {
             font-size: 16px;
             font-weight: 400;
         }
+
+        &_background2 {
+            background-color: #F7E4E2;
+            width: 360px;
+            height: 420px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__item_select:hover .products__cart {
+        display: flex;
     }
 
     &__cart {
@@ -288,63 +297,52 @@ body {
         /* display: flex; */
         justify-content: center;
         align-items: center;
-    }
 
-    &__cart-btn {
-        width: 139px;
-        height: 44px;
-        border: 1px solid white;
+        &-btn {
+            width: 139px;
+            height: 44px;
+            border: 1px solid white;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 11px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 11px;
 
-        & h6 {
-            margin: 0;
-            color: #FFF;
-            font-size: 14px;
-            font-weight: 400;
+            & h6 {
+                margin: 0;
+                color: #FFF;
+                font-size: 14px;
+                font-weight: 400;
+            }
         }
     }
 
-
-
-    &__item_background2 {
-        background-color: #F7E4E2;
-        width: 360px;
-        height: 420px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__button {
+    &__btn {
         margin: 48px auto 0;
         width: 212px;
-    }
 
-    &__btn_text {
-        height: 48px;
-        border: 1px #FF6A6A solid;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        &_text {
+            height: 48px;
+            border: 1px #FF6A6A solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-    &__btn_text p {
-        margin: 0;
-        display: block;
-        color: #F26376;
-        font-size: 16px;
-    }
+            & p {
+                margin: 0;
+                display: block;
+                color: #F26376;
+                font-size: 16px;
+            }
 
-    &__btn_text:hover {
-        background-color: #F16D7F;
-    }
+            &:hover {
+                background-color: #F16D7F;
 
-    &__btn_text:hover p {
-        color: #FFFFFF;
+                & p {
+                    color: #FFFFFF;
+                }
+            }
+        }
     }
 }
 
