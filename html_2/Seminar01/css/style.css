@@ -108,6 +108,11 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+.menu__container > div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
 .menu__search {
   margin-left: 41px;
 }
@@ -311,18 +316,10 @@ body {
   font-size: 16px;
   font-weight: 400;
 }
-.products__item_background2 {
-  background-color: #F7E4E2;
-  width: 360px;
-  height: 420px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.products__item_select:hover .products__cart {
+.products__item_select:hover .products__item_cart {
   display: flex;
 }
-.products__cart {
+.products__item_cart {
   display: none;
   position: absolute;
   width: 100%;
@@ -333,7 +330,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.products__cart-btn {
+.products__item_cart-btn {
   width: 139px;
   height: 44px;
   border: 1px solid white;
@@ -342,11 +339,19 @@ body {
   align-items: center;
   gap: 11px;
 }
-.products__cart-btn h6 {
+.products__item_cart-btn h6 {
   margin: 0;
   color: #FFF;
   font-size: 14px;
   font-weight: 400;
+}
+.products__item_background2 {
+  background-color: #F7E4E2;
+  width: 360px;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .products__btn {
   margin: 48px auto 0;
@@ -483,7 +488,7 @@ body {
 
 .email {
   width: 256px;
-  height: 49px;
+  height: 50px;
   border: none;
   border-radius: 25%;
   background-color: #E1E1E1;
@@ -499,9 +504,9 @@ body {
 }
 
 .submit {
-  margin-left: -3px;
+  margin-left: -4px;
   width: 100px;
-  height: 49px;
+  height: 50px;
   border: none;
   border-radius: 0 25px 25px 0;
   background-color: #F16D7F;
