@@ -355,8 +355,10 @@ body {
             height: 420px;
             top: 0;
             background-color: rgba(58, 56, 56, 0.86);
+            pointer-events: none;
 
             &-btn {
+                pointer-events: all;
                 width: 139px;
                 height: 44px;
                 border: 1px solid white;
