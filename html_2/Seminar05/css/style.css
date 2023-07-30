@@ -205,7 +205,7 @@ details > summary {
   position: relative;
 }
 .catalog__main .catalog__properties details.catalog__properties_filter {
-  width: 360px;
+  width: auto;
   position: absolute;
   z-index: 1;
   background-color: #FFFFFF;
@@ -222,7 +222,17 @@ details > summary {
 .catalog__main .catalog__properties details.catalog__properties_filter summary:hover path {
   fill: #EF5B70;
 }
+@media (max-width: 768px) {
+  .catalog__main .catalog__properties details.catalog__properties_filter summary .summary__caption-text {
+    display: none;
+  }
+  .catalog__main .catalog__properties details.catalog__properties_filter summary svg {
+    width: 37.5px;
+    height: 25px;
+  }
+}
 .catalog__main .catalog__properties details.catalog__properties_filter[open] {
+  width: 360px;
   top: -13px;
   left: -16px;
   padding: 13px 16px 16px;
@@ -249,6 +259,11 @@ details > summary {
 }
 .catalog__main .catalog__properties_item:hover .dropdown {
   display: block;
+}
+@media (max-width: 1140px) {
+  .catalog__main .catalog__properties_item {
+    top: 15px;
+  }
 }
 @media (max-width: 1140px) {
   .catalog__main .catalog__properties {
@@ -299,6 +314,11 @@ details > summary {
   .catalog__main {
     padding-top: 24px;
     max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .catalog__main {
+    max-width: 360px;
   }
 }
 
@@ -360,6 +380,16 @@ details.category_details ul li {
   }
 }
 
+@media (max-width: 1140px) {
+  .catalog__properties-item-caption {
+    color: #6F6E6E;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
 .description-block {
   color: #575757;
   font-family: Lato;
@@ -687,6 +717,13 @@ details.category_details ul li {
   font-size: 24px;
   font-weight: 400;
 }
+@media (max-width: 768px) {
+  .product__header .header__left {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
 .product__header .header__right p {
   color: #636363;
   font-size: 14px;
@@ -697,10 +734,23 @@ details.category_details ul li {
   font-size: 14px;
   font-weight: 700;
 }
+@media (max-width: 768px) {
+  .product__header .header__right {
+    width: 100%;
+    margin-top: 32px;
+    text-align: center;
+  }
+}
 @media (max-width: 1140px) {
   .product__header {
     -moz-column-gap: 333px;
          column-gap: 333px;
+  }
+}
+@media (max-width: 768px) {
+  .product__header {
+    display: block;
+    padding-top: 24px;
   }
 }
 

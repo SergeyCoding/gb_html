@@ -18,7 +18,7 @@
         }
 
         details.catalog__properties_filter {
-            width: 360px;
+            width: auto;
             position: absolute;
             z-index: 1;
             background-color: #FFFFFF;
@@ -34,9 +34,21 @@
                         fill: vars.$selected-text-color2;
                     }
                 }
+
+                @media (max-width: vars.$media-width-md) {
+                    .summary__caption-text {
+                        display: none;
+                    }
+
+                    svg {
+                        width: 37.5px;
+                        height: 25px;
+                    }
+                }
             }
 
             &[open] {
+                width: 360px;
                 top: -13px;
                 left: -16px;
                 padding: 13px 16px 16px;
@@ -50,15 +62,14 @@
                         fill: vars.$selected-text-color2;
                     }
                 }
-
-
-
             }
         }
 
         &_items {
             @include mixins.d-flex($justifyContent: normal);
             gap: 28px;
+
+
         }
 
         &_item {
@@ -71,11 +82,17 @@
                     display: block;
                 }
             }
+
+            @media (max-width: vars.$media-width-xl) {
+                top: 15px;
+            }
         }
 
         @media (max-width: vars.$media-width-xl) {
             justify-content: space-between;
         }
+
+        @media (max-width: vars.$media-width-md) {}
 
     }
 
@@ -124,6 +141,10 @@
     @media (max-width: vars.$media-width-xl) {
         padding-top: 24px;
         max-width: vars.$media-width-md;
+    }
+
+    @media (max-width: vars.$media-width-md) {
+        max-width: 360px;
     }
 }
 
@@ -195,5 +216,16 @@ details.category_details {
 .products__item_hidden {
     @media (max-width: vars.$media-width-xl) {
         display: none;
+    }
+}
+
+@media (max-width: vars.$media-width-xl) {
+    .catalog__properties-item-caption {
+        color: #6F6E6E;
+        font-family: Lato;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
 }
