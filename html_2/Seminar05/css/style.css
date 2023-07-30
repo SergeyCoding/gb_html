@@ -87,34 +87,6 @@ details > summary {
   cursor: pointer;
 }
 
-.product__header {
-  height: 148px;
-  background-color: #F8F3F4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -moz-column-gap: 737px;
-       column-gap: 737px;
-}
-.product__header .header__left {
-  width: auto;
-}
-.product__header .header__left p {
-  color: #F16D7F;
-  font-size: 24px;
-  font-weight: 400;
-}
-.product__header .header__right p {
-  color: #636363;
-  font-size: 14px;
-  font-weight: 300;
-}
-.product__header .header__right p span {
-  color: #F16D7F;
-  font-size: 14px;
-  font-weight: 700;
-}
-
 .product__main .product__slides {
   position: relative;
   height: 777px;
@@ -278,8 +250,18 @@ details > summary {
 .catalog__main .catalog__properties_item:hover .dropdown {
   display: block;
 }
+@media (max-width: 1140px) {
+  .catalog__main .catalog__properties {
+    justify-content: space-between;
+  }
+}
 .catalog__main_products.products {
   margin-top: 65px;
+}
+@media (max-width: 1140px) {
+  .catalog__main_products.products {
+    margin-top: 40px;
+  }
 }
 .catalog__main .pagination {
   margin: 48px auto 0;
@@ -312,6 +294,12 @@ details > summary {
 .catalog__main .pagination svg {
   margin: 5px 15px;
   cursor: pointer;
+}
+@media (max-width: 1140px) {
+  .catalog__main {
+    padding-top: 24px;
+    max-width: 768px;
+  }
 }
 
 .category_name {
@@ -364,6 +352,12 @@ details.category_details ul li {
 }
 .dropdown p {
   margin-top: 10px;
+}
+
+@media (max-width: 1140px) {
+  .products__item_hidden {
+    display: none;
+  }
 }
 
 .description-block {
@@ -674,6 +668,40 @@ details.category_details ul li {
 .register-main__button:hover {
   background-color: #EF5B70;
   transition: background-color 0.3s;
+}
+
+.product__header {
+  height: 148px;
+  background-color: #F8F3F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 737px;
+       column-gap: 737px;
+}
+.product__header .header__left {
+  width: auto;
+}
+.product__header .header__left p {
+  color: #F16D7F;
+  font-size: 24px;
+  font-weight: 400;
+}
+.product__header .header__right p {
+  color: #636363;
+  font-size: 14px;
+  font-weight: 300;
+}
+.product__header .header__right p span {
+  color: #F16D7F;
+  font-size: 14px;
+  font-weight: 700;
+}
+@media (max-width: 1140px) {
+  .product__header {
+    -moz-column-gap: 333px;
+         column-gap: 333px;
+  }
 }
 
 body {

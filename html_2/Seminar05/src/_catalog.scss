@@ -73,11 +73,18 @@
             }
         }
 
+        @media (max-width: vars.$media-width-xl) {
+            justify-content: space-between;
+        }
 
     }
 
     &_products.products {
         margin-top: 65px;
+
+        @media (max-width: vars.$media-width-xl) {
+            margin-top: 40px;
+        }
     }
 
     .pagination {
@@ -112,6 +119,11 @@
             margin: 5px 15px;
             cursor: pointer;
         }
+    }
+
+    @media (max-width: vars.$media-width-xl) {
+        padding-top: 24px;
+        max-width: vars.$media-width-md;
     }
 }
 
@@ -177,5 +189,11 @@ details.category_details {
 
     p {
         margin-top: 10px;
+    }
+}
+
+.products__item_hidden {
+    @media (max-width: vars.$media-width-xl) {
+        display: none;
     }
 }
