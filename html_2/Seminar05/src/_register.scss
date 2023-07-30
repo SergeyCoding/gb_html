@@ -33,6 +33,11 @@
         }
 
     }
+
+    @media (max-width: vars.$media-width-md) {
+        margin-top: 40px;
+        width: 100%;
+    }
 }
 
 .register-main {
@@ -138,5 +143,17 @@
             transition: background-color .3s;
         }
 
+    }
+
+    @media (max-width: vars.$media-width-xl) {
+        width: 768px;
+        gap: 22px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: vars.$media-width-md) {
+        width: 375px;
+        display: block;
     }
 }

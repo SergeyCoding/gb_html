@@ -740,6 +740,12 @@ details.category_details ul li {
 .reg-descr__item:first-of-type {
   margin-top: 21px;
 }
+@media (max-width: 768px) {
+  .reg-descr {
+    margin-top: 40px;
+    width: 100%;
+  }
+}
 
 .register-main {
   padding-top: 64px;
@@ -829,6 +835,20 @@ details.category_details ul li {
 .register-main__button:hover {
   background-color: #EF5B70;
   transition: background-color 0.3s;
+}
+@media (max-width: 1140px) {
+  .register-main {
+    width: 768px;
+    gap: 22px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 768px) {
+  .register-main {
+    width: 375px;
+    display: block;
+  }
 }
 
 .product__header {
