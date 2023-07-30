@@ -213,11 +213,7 @@ details.category_details {
     }
 }
 
-.products__item_hidden {
-    @media (max-width: vars.$media-width-xl) {
-        display: none;
-    }
-}
+
 
 @media (max-width: vars.$media-width-xl) {
     .catalog__properties-item-caption {
