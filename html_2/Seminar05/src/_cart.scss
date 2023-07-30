@@ -3,12 +3,27 @@
 @use 'vars';
 
 
-.cart-header {
-
-    justify-content: left;
+.product__header.cart-header {
 
     .header__left {
-        margin-left: 230px;
+        width: vars.$media-width-xl;
+        text-align: left;
+        justify-content: normal;
+
+
+        @media (max-width: vars.$media-width-xl) {
+            width: vars.$media-width-md;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: vars.$media-width-md) {
+            width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 26px;
+        }
     }
 }
 
@@ -22,16 +37,53 @@
         &_gap {
             margin-top: 40px;
         }
+
+        @media (max-width: vars.$media-width-xl) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__left {
+        @media (max-width: vars.$media-width-md) {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &__right {
         margin-top: calc(113px - 96px);
         width: 360px;
+
+        @media (max-width: vars.$media-width-xl) and (min-width:calc(vars.$media-width-md + 1px)) {
+            width: 768px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: 15px;
+        }
+
+        // @media (max-width: vars.$media-width-md) {
+        //     width: 100%;
+        // }
+    }
+
+    @media (max-width: vars.$media-width-xl) {
+        display: block;
+        max-width: 768px;
+        padding-bottom: 128px;
+    }
+
+    @media (max-width: vars.$media-width-md) {
+        max-width: 375px;
+        margin-top: 39px auto 96px;
     }
 }
 
 .cart-form {
     background-color: white;
+
 
     input {
         margin-top: 21px;
@@ -50,6 +102,10 @@
             background-color: #F16D7F;
             transition: background-color .4s;
         }
+    }
+
+    @media (max-width: vars.$media-width-xl) {
+        width: auto;
     }
 }
 
@@ -120,6 +176,14 @@
             background-color: vars.$selected-text-color2;
         }
     }
+
+    @media (max-width: vars.$media-width-xl) {
+        margin-top: 0;
+    }
+
+    @media (max-width: vars.$media-width-md) {
+        margin-top: 48px;
+    }
 }
 
 .cart-item {
@@ -138,10 +202,20 @@
 
     &__img {
         width: 262px;
+
+        @media (max-width: vars.$media-width-md) {
+            width: 143px;
+            height: 188px;
+        }
     }
 
     &__description {
         width: 100%;
+
+        @media (max-width: vars.$media-width-md) {
+            width: 214px;
+            height: 188px;
+        }
     }
 
     &__closing {
@@ -158,10 +232,20 @@
         color: #222;
         font-size: 24px;
         font-weight: 400;
+
+        @media (max-width: vars.$media-width-md) {
+            width: 145px;
+            font-size: 16px;
+        }
     }
 
     &_price {
         margin-top: 42px;
+
+        @media (max-width: vars.$media-width-md) {
+            margin-top: 25px;
+            font-size: 14px;
+        }
     }
 
     &_color {
@@ -170,6 +254,11 @@
         >span {
             color: #6F6E6E;
         }
+
+        @media (max-width: vars.$media-width-md) {
+            margin-top: 4px;
+            font-size: 14px;
+        }
     }
 
     &_size {
@@ -177,6 +266,11 @@
 
         >span {
             color: #6F6E6E;
+        }
+
+        @media (max-width: vars.$media-width-md) {
+            margin-top: 4px;
+            font-size: 14px;
         }
 
     }
@@ -193,8 +287,25 @@
             padding-left: 16px;
             padding-right: 16px;
             border: #EAEAEA solid 1px;
+
+            @media (max-width: vars.$media-width-md) {
+                font-size: 10px;
+            }
         }
 
+        @media (max-width: vars.$media-width-md) {
+            margin-top: 4px;
+            font-size: 14px;
+
+            >span {
+                font-size: 10px;
+            }
+        }
+    }
+
+    @media (max-width: vars.$media-width-md) {
+        width: 375px;
+        height: 188px;
     }
 }
 
@@ -213,5 +324,18 @@
             background-color: #F16D7F;
             transition: background-color .3s;
         }
+    }
+
+    @media (max-width: vars.$media-width-xl) {
+        justify-content: center;
+        gap: 48px;
+    }
+
+    @media (max-width: vars.$media-width-md) {
+        gap: 9px;
+    }
+
+    @media (min-width: calc(vars.$media-width-md + 1px)) {
+        text-transform: uppercase;
     }
 }

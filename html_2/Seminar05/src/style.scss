@@ -9,6 +9,10 @@
 
 @import 'common/products';
 
+// * {
+//     border: 1px solid yellowgreen !important;
+// }
+
 body {
     background-color: #FFFFFF;
     font-family: Lato;
@@ -296,11 +300,14 @@ body {
         margin: 0 auto;
         height: 341px;
 
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
         @include mixins.d-flex($justifyContent: space-between);
         gap: 30px;
+
+        @media (max-width: vars.$media-width-md) {
+            &.footer__items_hidden {
+                display: none;
+            }
+        }
     }
 
     &__imgitem {

@@ -396,11 +396,26 @@ details.category_details ul li {
   color: #EF5B70;
 }
 
-.cart-header {
-  justify-content: left;
+.product__header.cart-header .header__left {
+  width: 1140px;
+  text-align: left;
+  justify-content: normal;
 }
-.cart-header .header__left {
-  margin-left: 230px;
+@media (max-width: 1140px) {
+  .product__header.cart-header .header__left {
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 768px) {
+  .product__header.cart-header .header__left {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 26px;
+  }
 }
 
 .cart-main {
@@ -413,9 +428,44 @@ details.category_details ul li {
 .cart-main__cart-item_gap {
   margin-top: 40px;
 }
+@media (max-width: 1140px) {
+  .cart-main__cart-item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 768px) {
+  .cart-main__left {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .cart-main__right {
   margin-top: 17px;
   width: 360px;
+}
+@media (max-width: 1140px) and (min-width: 769px) {
+  .cart-main__right {
+    width: 768px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 15px;
+  }
+}
+@media (max-width: 1140px) {
+  .cart-main {
+    display: block;
+    max-width: 768px;
+    padding-bottom: 128px;
+  }
+}
+@media (max-width: 768px) {
+  .cart-main {
+    max-width: 375px;
+    margin-top: 39px auto 96px;
+  }
 }
 
 .cart-form {
@@ -436,6 +486,11 @@ details.category_details ul li {
 .cart-form input[type=submit]:hover {
   background-color: #F16D7F;
   transition: background-color 0.4s;
+}
+@media (max-width: 1140px) {
+  .cart-form {
+    width: auto;
+  }
 }
 
 .cart-summary {
@@ -494,6 +549,16 @@ details.category_details ul li {
 .cart-summary__btn:hover {
   background-color: #EF5B70;
 }
+@media (max-width: 1140px) {
+  .cart-summary {
+    margin-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  .cart-summary {
+    margin-top: 48px;
+  }
+}
 
 .cart-item {
   width: 652px;
@@ -512,8 +577,20 @@ details.category_details ul li {
 .cart-item__img {
   width: 262px;
 }
+@media (max-width: 768px) {
+  .cart-item__img {
+    width: 143px;
+    height: 188px;
+  }
+}
 .cart-item__description {
   width: 100%;
+}
+@media (max-width: 768px) {
+  .cart-item__description {
+    width: 214px;
+    height: 188px;
+  }
 }
 .cart-item__closing {
   position: absolute;
@@ -528,8 +605,20 @@ details.category_details ul li {
   font-size: 24px;
   font-weight: 400;
 }
+@media (max-width: 768px) {
+  .cart-item__caption {
+    width: 145px;
+    font-size: 16px;
+  }
+}
 .cart-item_price {
   margin-top: 42px;
+}
+@media (max-width: 768px) {
+  .cart-item_price {
+    margin-top: 25px;
+    font-size: 14px;
+  }
 }
 .cart-item_color {
   margin-top: 6px;
@@ -537,11 +626,23 @@ details.category_details ul li {
 .cart-item_color > span {
   color: #6F6E6E;
 }
+@media (max-width: 768px) {
+  .cart-item_color {
+    margin-top: 4px;
+    font-size: 14px;
+  }
+}
 .cart-item_size {
   margin-top: 6px;
 }
 .cart-item_size > span {
   color: #6F6E6E;
+}
+@media (max-width: 768px) {
+  .cart-item_size {
+    margin-top: 4px;
+    font-size: 14px;
+  }
 }
 .cart-item_quantity {
   margin-top: 6px;
@@ -554,6 +655,26 @@ details.category_details ul li {
   padding-left: 16px;
   padding-right: 16px;
   border: #EAEAEA solid 1px;
+}
+@media (max-width: 768px) {
+  .cart-item_quantity > span {
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .cart-item_quantity {
+    margin-top: 4px;
+    font-size: 14px;
+  }
+  .cart-item_quantity > span {
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .cart-item {
+    width: 375px;
+    height: 188px;
+  }
 }
 
 .cart-buttons {
@@ -571,6 +692,22 @@ details.category_details ul li {
 .cart-buttons__btn:hover {
   background-color: #F16D7F;
   transition: background-color 0.3s;
+}
+@media (max-width: 1140px) {
+  .cart-buttons {
+    justify-content: center;
+    gap: 48px;
+  }
+}
+@media (max-width: 768px) {
+  .cart-buttons {
+    gap: 9px;
+  }
+}
+@media (min-width: 769px) {
+  .cart-buttons {
+    text-transform: uppercase;
+  }
 }
 
 .reg-descr {
@@ -1096,6 +1233,11 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+}
+@media (max-width: 768px) {
+  .footer__items.footer__items_hidden {
+    display: none;
+  }
 }
 .footer__imgitem {
   height: 40px;
