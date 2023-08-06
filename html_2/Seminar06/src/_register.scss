@@ -1,0 +1,159 @@
+@use 'mixins';
+@use 'vars';
+
+.reg-descr {
+    width: 652px;
+
+    &__caption {
+        color: #000;
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__offer {
+        margin-top: 22px;
+        color: #000;
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__item {
+        margin-top: 16px;
+        @include mixins.d-flex($justifyContent: normal);
+        gap: 22px;
+
+        &:first-of-type {
+            margin-top: 21px;
+        }
+
+    }
+
+    @media (max-width: vars.$media-width-md) {
+        margin-top: 40px;
+        width: 100%;
+    }
+}
+
+.register-main {
+    padding-top: 64px;
+    padding-bottom: 96px;
+
+    @include mixins.d-flex($alignItems: normal);
+    gap: 128px;
+
+    &__form {
+        width: 360px;
+    }
+
+    .person-name {
+
+        &__caption {
+            color: #222;
+            font-family: Lato;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+    }
+
+    .person-sex {
+        margin-top: 31px;
+
+        label {
+            margin-left: 10px;
+            color: #000;
+            font-family: Lato;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        input {
+            margin-left: 20px;
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .person-login {
+        margin-top: 34px;
+
+        &__caption {
+            margin-top: 20px;
+            color: #222;
+            font-family: Lato;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &__info {
+            margin-top: 15px;
+            color: #B1B1B1;
+            font-family: Lato;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+    }
+
+    input[type="text"] {
+        border: 1px solid #A4A4A4;
+        width: 359px;
+        height: 44px;
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    &__button {
+        margin-top: 39px;
+        padding: 16px 30px;
+        background-color: vars.$selected-text-color;
+
+        @include mixins.d-flex;
+        gap: 20px;
+
+        p {
+            color: #FFF;
+            font-family: Lato;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        svg {
+            display: block;
+        }
+
+        &:hover {
+            background-color: vars.$selected-text-color2;
+            transition: background-color .3s;
+        }
+
+    }
+
+    @media (max-width: vars.$media-width-xl) {
+        width: 768px;
+        gap: 22px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: vars.$media-width-md) {
+        width: 375px;
+        display: block;
+    }
+}
