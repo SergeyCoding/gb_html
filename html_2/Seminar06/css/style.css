@@ -1012,9 +1012,11 @@ details.category_details ul li {
 }
 .products__btn_text:hover {
   background-color: #F16D7F;
+  transition: background-color 0.3s;
 }
 .products__btn_text:hover p {
   color: #FFFFFF;
+  transition: color 0.3s;
 }
 
 @media (max-width: 1140px) {

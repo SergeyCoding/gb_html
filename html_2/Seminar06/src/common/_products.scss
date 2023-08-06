@@ -134,9 +134,11 @@
 
             &:hover {
                 background-color: vars.$selected-text-color;
+                transition: background-color .3s;
 
                 & p {
                     color: #FFFFFF;
+                    transition: color .3s;
                 }
             }
         }
