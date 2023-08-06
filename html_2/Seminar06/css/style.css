@@ -470,7 +470,7 @@ details.category_details ul li {
 @media (max-width: 768px) {
   .cart-main {
     max-width: 375px;
-    margin-top: 39px auto 96px;
+    margin: 39px auto 96px;
   }
 }
 
