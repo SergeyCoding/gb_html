@@ -98,6 +98,12 @@ details > summary {
 .product__main .product__slides img {
   margin-top: 11px;
 }
+@media (max-width: 597px) {
+  .product__main .product__slides img {
+    width: 100%;
+    height: auto;
+  }
+}
 .product__main .product__slides .product__sliders_buttons {
   position: absolute;
   width: 100%;
@@ -692,6 +698,11 @@ details.category_details ul li {
 .cart-buttons__btn:hover {
   background-color: #F16D7F;
   transition: background-color 0.3s;
+}
+@media (max-width: 768px) {
+  .cart-buttons__btn {
+    padding: 14px 25px;
+  }
 }
 @media (max-width: 1140px) {
   .cart-buttons {

@@ -12,6 +12,11 @@
 
         img {
             margin-top: 11px;
+
+            @media (max-width:597px) {
+                width: 100%;
+                height: auto;
+            }
         }
 
         .product__sliders_buttons {
