@@ -832,7 +832,7 @@ details.category_details ul li {
   align-items: center;
   gap: 20px;
 }
-.register-main__button p {
+.register-main__button span {
   color: #FFF;
   font-family: Lato;
   font-size: 14px;
