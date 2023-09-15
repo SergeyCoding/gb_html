@@ -1,3 +1,7 @@
+div {
+  border: 1px solid yellowgreen;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -97,6 +101,10 @@ body {
   padding-top: 50px;
 }
 
+a {
+  color: inherit;
+}
+
 .header {
   max-width: 1200px;
   height: 50px;
@@ -127,7 +135,7 @@ body {
   gap: 50px;
   color: #292f36;
   text-align: center;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -153,7 +161,7 @@ body {
 }
 .main__banner h1 {
   color: #292f36;
-  font-family: DM Serif Display;
+  font-family: "DM Serif Display";
   font-size: 65px;
   font-style: normal;
   font-weight: 400;
@@ -163,7 +171,7 @@ body {
 .main__banner p {
   margin-top: 18px;
   color: #4d5053;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -186,7 +194,7 @@ body {
   margin-top: 0;
   color: #fff;
   text-align: center;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -208,7 +216,7 @@ body {
 }
 .projects__item h3 {
   color: #292f36;
-  font-family: DM Serif Display;
+  font-family: "DM Serif Display";
   font-size: 25px;
   font-style: normal;
   font-weight: 400;
@@ -218,7 +226,7 @@ body {
 }
 .projects__item p {
   color: #4d5053;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -234,7 +242,7 @@ body {
 .projects__heading h2 {
   color: #292f36;
   text-align: center;
-  font-family: DM Serif Display;
+  font-family: "DM Serif Display";
   font-size: 50px;
   font-style: normal;
   font-weight: 400;
@@ -245,7 +253,7 @@ body {
 .projects__heading p {
   color: #4d5053;
   text-align: center;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -286,7 +294,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #cda274;
-  font-family: DM Serif Display;
+  font-family: "DM Serif Display";
   font-size: 85px;
   font-style: normal;
   font-weight: 400;
@@ -304,7 +312,7 @@ body {
 .counter__text {
   margin-top: 16px;
   color: #4d5053;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -355,7 +363,7 @@ body {
   width: 305px;
   margin-bottom: 112px;
   color: #292f36;
-  font-family: DM Serif Display;
+  font-family: "DM Serif Display";
   font-size: 25px;
   font-style: normal;
   font-weight: 400;
@@ -379,7 +387,7 @@ body {
 }
 .blog__nav p {
   color: #4d5053;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -405,7 +413,7 @@ body {
   align-items: center;
   gap: 10px;
   color: #292f36;
-  font-family: DM Serif Display;
+  font-family: "DM Serif Display";
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -418,7 +426,7 @@ body {
 .footer__left > p {
   margin-top: 18px;
   color: #4d5053;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -434,7 +442,7 @@ body {
 }
 .footer__caption {
   color: #292f36;
-  font-family: DM Serif Display;
+  font-family: "DM Serif Display";
   font-size: 25px;
   font-style: normal;
   font-weight: 400;
@@ -444,7 +452,7 @@ body {
 .footer__content {
   margin-top: 33px;
   color: #4d5053;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 22px;
   font-style: normal;
   font-weight: 400;

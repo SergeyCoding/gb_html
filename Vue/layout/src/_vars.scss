@@ -1,13 +1,12 @@
-$media-width-xl: 1140px;
-$media-width-lg: 1024px;
-$media-width-md: 768px;
-$selected-text-color: #F16D7F;
-$selected-text-color2: #EF5B70;
-$basic-text-color: #222;
-$basic-footer-color: #222224;
+// colors
+$text-caption-color: #292f36;
+$text-color: #4d5053;
+$selected-color: #f4f0ec;
+$background-color: #ffffff;
+$gold-color: #cda274;
+$base-color: $gold-color;
+$frame-color: #e6e6e6;
 
-$products-basic-text-color: #636363;
-
-// catalog
-$page-text-color: #C4C4C4;
-$page-border-colot: #EBEBEB;
+// fonts
+$font-caption: "DM Serif Display";
+$font-base: "Jost";
