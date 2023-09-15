@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script src="./js/counters.js" defer></script>
+    <script src="./js/blog-item.js" defer></script>
     <title>Interno</title>
   </head>
   <body>
@@ -98,24 +100,10 @@
 
     <section class="counter">
       <div class="counter__content">
-        <div class="counter__item">
-          <p>12</p>
-          <p class="counter__text">Years Of Experiance</p>
-          <div class="counter__line"></div>
-        </div>
-        <div class="counter__item">
-          <p>85</p>
-          <p class="counter__text">Success Project</p>
-          <div class="counter__line"></div>
-        </div>
-        <div class="counter__item">
-          <p>15</p>
-          <p class="counter__text">Active Project</p>
-          <div class="counter__line"></div>
-        </div>
-        <div class="counter__item">
-          <p>95</p>
-          <p class="counter__text">Happy Customers</p>
+        <div class="counter__item" v-for="(c,i) in arr">
+          <p>{{c.count}}</p>
+          <p class="counter__text">{{c.name}}</p>
+          <div class="counter__line" v-if="i < arr.length-1"></div>
         </div>
       </div>
     </section>
