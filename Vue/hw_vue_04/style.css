@@ -38,3 +38,9 @@ ul, li{
   margin-left: 100px;
   color: blue;
 }
+
+button{
+  width: 100px;
+  padding: 10px;
+  margin: 0 10px ;
+}
