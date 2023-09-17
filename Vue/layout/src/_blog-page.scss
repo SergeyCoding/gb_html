@@ -132,6 +132,16 @@
 
     &__articles {
         margin-top: 150px;
+
+        >.blog__list {
+            flex-wrap: wrap;
+            row-gap: 30px;
+        }
+    }
+
+    &__pagination {
+        height: 100px;
+
     }
 
 }

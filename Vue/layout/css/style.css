@@ -198,6 +198,13 @@ details > summary {
 .blog-page__articles {
   margin-top: 150px;
 }
+.blog-page__articles > .blog__list {
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+.blog-page__pagination {
+  height: 100px;
+}
 
 html {
   font-family: "DM Serif Display";
@@ -207,6 +214,44 @@ html {
 
 body {
   padding-top: 50px;
+}
+body .background-lines {
+  position: relative;
+}
+body .background-lines .back-line {
+  width: 0;
+  height: calc(100% - 134px);
+  position: absolute;
+  left: calc((100% - 1200px) / 2);
+  border-left: 1px #E6E6E6 solid;
+  z-index: -100;
+}
+body .background-lines .back-line1 {
+  width: 0;
+  height: 100%;
+  height: calc(100% - 134px);
+  position: absolute;
+  left: calc((100% - 1200px) / 2 + 400px);
+  border-left: 1px #E6E6E6 solid;
+  z-index: -100;
+}
+body .background-lines .back-line2 {
+  width: 0;
+  height: 100%;
+  height: calc(100% - 134px);
+  position: absolute;
+  left: calc((100% - 1200px) / 2 + 800px);
+  border-left: 1px #E6E6E6 solid;
+  z-index: -100;
+}
+body .background-lines .back-line3 {
+  width: 0;
+  height: 100%;
+  height: calc(100% - 134px);
+  position: absolute;
+  left: calc((100% - 1200px) / 2 + 1200px);
+  border-left: 1px #E6E6E6 solid;
+  z-index: -100;
 }
 
 a {
