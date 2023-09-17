@@ -1,4 +1,4 @@
-const blogItem = new Vue({
+const blogPageItem = new Vue({
   el: '.blog__list',
   data: {
     blogs: [
@@ -21,6 +21,30 @@ const blogItem = new Vue({
       {
         img: './img/blog03.png',
         alt: 'blog3',
+        text: 'Best For Any Office & Business Interior',
+        text2: 'Solution',
+        data: '25 December,2022',
+        isSelected: false,
+      },
+      {
+        img: './img/blog04.png',
+        alt: 'blog4',
+        text: 'Let’s Get Solution For Building Construction',
+        text2: `Work`,
+        data: '26 December,2022',
+        isSelected: false,
+      },
+      {
+        img: './img/blog05.png',
+        alt: 'blog5',
+        text: 'Low Cost Latest Invented Interior Designing',
+        text2: 'Ideas.',
+        data: '22 December,2022',
+        isSelected: false,
+      },
+      {
+        img: './img/blog06.png',
+        alt: 'blog6',
         text: 'Best For Any Office & Business Interior',
         text2: 'Solution',
         data: '25 December,2022',
