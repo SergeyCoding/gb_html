@@ -95,7 +95,10 @@ details > summary {
 .blog-page__banner {
   margin-top: 45px;
   height: 356px;
-  background: url("../img/blog_banner01.jpg"), lightgray 50%/cover no-repeat;
+  background-origin: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/img/blog_banner01.jpg");
   display: flex;
   justify-content: center;
   align-items: end;
@@ -233,7 +236,6 @@ body .background-lines .back-line {
   width: 0;
   height: calc(100% - 134px);
   position: absolute;
-  left: calc((100% - 1200px) / 2);
   border-left: 1px #E6E6E6 solid;
   z-index: -100;
 }

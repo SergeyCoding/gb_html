@@ -14,14 +14,14 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
     <script src="/js/blog-page-item.js" defer></script>
+    <script src="/js/back-lines.js" defer></script>
     <title>Interno</title>
   </head>
   <body>
     <div class="background-lines">
-      <div class="back-line"></div>
-      <div class="back-line1"></div>
-      <div class="back-line2"></div>
-      <div class="back-line3"></div>
+      <div class="back-lines">
+        <div class="back-line" :style="{'left': `calc((100% - 1200px) / 2 + ${x}px)`}" v-for="(x) in lineList"></div>
+      </div>
 
       <header class="header">
         <div class="header__logo">

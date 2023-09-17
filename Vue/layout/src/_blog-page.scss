@@ -8,7 +8,10 @@
     &__banner {
         margin-top: 45px;
         height: 356px;
-        background: url("../img/blog_banner01.jpg"), lightgray 50% / cover no-repeat;
+        background-origin: border-box;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('/img/blog_banner01.jpg');
 
         display: flex;
         justify-content: center;
