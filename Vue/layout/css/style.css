@@ -1,3 +1,12 @@
+div {
+  border: 1px solid yellowgreen;
+}
+
+.counter__line {
+  border-width: 4px !important;
+  right: -2px !important;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -218,6 +227,37 @@ details > summary {
 }
 .blog-page__pagination {
   height: 100px;
+}
+
+.pagination {
+  width: 50%;
+  margin: 50px auto 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.pagination__item {
+  position: relative;
+}
+.pagination__item svg {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.pagination__number {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #292f36;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  /* 24px */
+  text-transform: capitalize;
 }
 
 html {

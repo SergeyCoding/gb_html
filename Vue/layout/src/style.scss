@@ -1,8 +1,9 @@
 @use "vars";
 
-// @import "test";
+@import "test";
 @import "reset";
 @import "./blog-page";
+@import './pagination';
 
 html {
   font-family: vars.$font-caption;
