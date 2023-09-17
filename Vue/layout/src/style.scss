@@ -301,7 +301,7 @@ a {
     border: 1px solid #e7e7e7;
     box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
 
-    > p {
+    >p {
       width: 305px;
       margin-bottom: calc(30px + 52px + 30px);
       color: vars.$text-caption-color;
@@ -381,7 +381,7 @@ a {
   &__left {
     width: 393px;
 
-    > p {
+    >p {
       margin-top: 18px;
       color: #4d5053;
       font-family: vars.$font-base;
@@ -397,7 +397,7 @@ a {
   &__socials {
     margin-top: 31px;
 
-    > svg {
+    >svg {
       margin-right: 54px;
     }
   }

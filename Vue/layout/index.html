@@ -97,17 +97,17 @@
         </div>
       </div>
     </main>
-
+    <!--  -->
     <section class="counter">
       <div class="counter__content">
-        <div class="counter__item" v-for="(c,i) in arr">
+        <div class="counter__item" v-for="c,i in arr">
           <p>{{c.count}}</p>
           <p class="counter__text">{{c.name}}</p>
           <div class="counter__line" v-if="i < arr.length-1"></div>
         </div>
       </div>
     </section>
-
+    <!--  -->
     <section class="blog">
       <div class="projects__heading">
         <h2>Articles & News</h2>
@@ -117,14 +117,11 @@
         </p>
       </div>
       <div class="blog__list">
-        <div class="blog__item">
+        <div class="blog__item" :class="{'blog__item_selected':blog.isSelected}" v-for="(blog, i) in blogs" :key="i">
           <div class="blog__pic">
-            <img src="./img/blog01.png" alt="blog 1" />
+            <img :src="blog.img" :alt="blog.alt" />
           </div>
-          <p>
-            Let’s Get Solution For Building Construction<br />
-            Work
-          </p>
+          <p>{{blog.text}}<br />{{blog.text2}}</p>
           <div class="blog__nav">
             <p>26 December,2022</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
@@ -139,50 +136,9 @@
             </svg>
           </div>
         </div>
-        <div class="blog__item blog__item_selected">
-          <div class="blog__pic">
-            <img src="./img/blog02.png" alt="blog 2" />
-          </div>
-          <p>Low Cost Latest Invented Interior Designing <br />Ideas.</p>
-          <div class="blog__nav">
-            <p>22 December,2022</p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
-              <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-              <path
-                d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813"
-                stroke="#292F36"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-        <div class="blog__item">
-          <div class="blog__pic">
-            <img src="./img/blog03.png" alt="blog 3" />
-          </div>
-          <p>
-            Best For Any Office & Business Interior <br />
-            Solution
-          </p>
-          <div class="blog__nav">
-            <p>25 December,2022</p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
-              <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-              <path
-                d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813"
-                stroke="#292F36"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
       </div>
     </section>
-
+    <!--  -->
     <footer class="footer">
       <div class="footer__left">
         <div class="footer__logo">
