@@ -11,65 +11,25 @@ html {
   // font-size: 14px;
 }
 
-body {
-  padding-top: 50px;
-
-
-  .background-lines {
-    position: relative;
-    // margin-bottom: 134px;
-
-    .back-line {
-      width: 0;
-      height: calc(100% - 134px);
-
-      position: absolute;
-      // left: calc((100% - 1200px) / 2);
-
-      border-left: 1px #E6E6E6 solid;
-      z-index: -100;
-    }
-
-    .back-line1 {
-      width: 0;
-      height: 100%;
-      height: calc(100% - 134px);
-
-      position: absolute;
-      left: calc((100% - 1200px) / 2 + 400px);
-
-      border-left: 1px #E6E6E6 solid;
-      z-index: -100;
-    }
-
-    .back-line2 {
-      width: 0;
-      height: 100%;
-      height: calc(100% - 134px);
-
-      position: absolute;
-      left: calc((100% - 1200px) / 2 + 800px);
-
-      border-left: 1px #E6E6E6 solid;
-      z-index: -100;
-    }
-
-    .back-line3 {
-      width: 0;
-      height: 100%;
-      height: calc(100% - 134px);
-
-      position: absolute;
-      left: calc((100% - 1200px) / 2 + 1200px);
-
-      border-left: 1px #E6E6E6 solid;
-      z-index: -100;
-    }
-  }
-}
 
 a {
   color: inherit;
+}
+
+.body-content {
+  padding-top: 50px;
+  position: relative;
+
+  .back-line {
+    width: 0;
+    height: calc(100% - 134px);
+
+    position: absolute;
+    // left: calc((100% - 1200px) / 2);
+
+    border-left: 1px #E6E6E6 solid;
+    z-index: -100;
+  }
 }
 
 .header {
