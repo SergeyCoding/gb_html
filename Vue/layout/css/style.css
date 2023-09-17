@@ -98,7 +98,7 @@ details > summary {
   background-origin: border-box;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("/img/blog_banner01.jpg");
+  background-image: url("./../img/blog_banner01.jpg");
   display: flex;
   justify-content: center;
   align-items: end;
