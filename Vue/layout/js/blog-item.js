@@ -14,17 +14,15 @@ const blogItem = new Vue({
         img: './img/blog02.png',
         alt: 'blog2',
         text: 'Low Cost Latest Invented Interior Designing',
-        text2: `           Ideas.            `,
+        text2: 'Ideas.',
         data: '22 December,2022',
         isSelected: true,
       },
       {
         img: './img/blog03.png',
         alt: 'blog3',
-        text: `
-          Best For Any Office & Business Interior
-          Solution
-           `,
+        text: 'Best For Any Office & Business Interior',
+        text2: 'Solution',
         data: '25 December,2022',
         isSelected: false,
       },

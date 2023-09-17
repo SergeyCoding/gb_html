@@ -1,6 +1,6 @@
 @use "vars";
 
-@import "test";
+// @import "test";
 @import "reset";
 @import "./blog-page";
 
@@ -397,7 +397,7 @@ a {
   &__socials {
     margin-top: 31px;
 
-    >svg {
+    >a {
       margin-right: 54px;
     }
   }
