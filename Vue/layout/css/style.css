@@ -132,8 +132,8 @@ details > summary {
   margin: 200px auto;
 }
 .blog-page__post > h2 {
-  color: #292F36;
-  font-family: DM Serif Display;
+  color: #292f36;
+  font-family: "DM Serif Display";
   font-size: 50px;
   font-style: normal;
   font-weight: 400;
@@ -199,8 +199,19 @@ details > summary {
   margin-top: 150px;
 }
 .blog-page__articles > .blog__list {
+  margin-top: 30px;
   flex-wrap: wrap;
   row-gap: 30px;
+}
+.blog-page__articles > h2 {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 62.5px */
+  letter-spacing: 1px;
 }
 .blog-page__pagination {
   height: 100px;

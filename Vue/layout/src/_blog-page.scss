@@ -55,8 +55,8 @@
     &__post {
 
         >h2 {
-            color: #292F36;
-            font-family: DM Serif Display;
+            color: vars.$text-caption-color;
+            font-family: vars.$font-caption;
             font-size: 50px;
             font-style: normal;
             font-weight: 400;
@@ -128,14 +128,28 @@
         border-radius: 62px;
         border: 1px solid #E7E7E7;
         box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+
+
     }
 
     &__articles {
         margin-top: 150px;
 
         >.blog__list {
+            margin-top: 30px;
             flex-wrap: wrap;
             row-gap: 30px;
+        }
+
+        >h2 {
+            color: vars.$text-caption-color;
+            font-family: vars.$font-caption;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+            /* 62.5px */
+            letter-spacing: 1px;
         }
     }
 
@@ -143,5 +157,7 @@
         height: 100px;
 
     }
+
+
 
 }
