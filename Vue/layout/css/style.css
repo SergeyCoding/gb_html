@@ -225,10 +225,6 @@ details > summary {
   /* 62.5px */
   letter-spacing: 1px;
 }
-.blog-page__pagination {
-  height: 100px;
-}
-
 .pagination {
   width: 50%;
   margin: 50px auto 0;
