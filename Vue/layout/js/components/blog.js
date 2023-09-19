@@ -28,7 +28,42 @@ Vue.component('Blog', {
             </div>
             `,
         },
-        { blogId: '102', title: 'Design sprints are great', content: '' },
+        {
+          blogId: '102',
+          title: 'Design sprints are great',
+          content: ` <p>
+        Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular
+        belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
+      </p>
+      <div class="text-reference">
+        <p>1</p>
+        <p>
+          Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the
+          majority have suffered.
+        </p>
+      </div>
+      <div class="text-reference">
+        <p>2</p>
+        <p>
+          Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the
+          majority have suffered.
+        </p>
+      </div>
+      <div class="text-reference">
+        <p>3</p>
+        <p>
+          Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the
+          majority have suffered.
+        </p>
+      </div>
+      <div class="bdp-blog__img">
+        <img src="./img/blog-details-img02.png" alt="" />
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular
+        belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
+      </p>`,
+        },
         { blogId: '103', title: 'title 103', content: 'content 103' },
         { blogId: '104', title: 'title 104', content: 'content 104' },
         { blogId: '105', title: 'title 105', content: 'content 105' },
