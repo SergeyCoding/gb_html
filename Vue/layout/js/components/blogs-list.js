@@ -26,7 +26,7 @@ Vue.component('BlogsList', {
     showBlogsUpdate() {},
     printShowBlogs() {
       this.showBlogs.forEach((element) => {
-        console.log('showBlogs: ', element.blogId, element.tags);
+        // console.log('showBlogs: ', element.blogId, element.tags);
       });
     },
   },
@@ -41,15 +41,8 @@ Vue.component('BlogsList', {
   },
 
   created() {
-    console.log('created');
     this.curTag = this.tag;
-    console.log(this.blogs);
     this.showBlogs = this.blogs.filter((v) => v.tags.includes(this.curTag)).slice(0, 3);
-    console.log(this.showBlogs);
-  },
-
-  activated() {
-    console.log('activated');
   },
 
   beforeUpdate() {

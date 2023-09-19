@@ -11,13 +11,11 @@ Vue.component('BlogDetails', {
   methods: {
     setCurrentTag(v) {
       this.currentTag = v;
-      console.log(this.currentTag);
     },
   },
 
   created() {
     this.currentTag = this.tags[0];
-    console.log(this.currentTag);
   },
 
   template: `
