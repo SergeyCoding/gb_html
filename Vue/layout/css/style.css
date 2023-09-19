@@ -297,6 +297,10 @@ details > summary {
   background-color: #292f36;
   color: #ffffff;
 }
+.blog-details-page .bdp-blog-tags__btn_active {
+  background-color: #292f36;
+  color: #ffffff;
+}
 .blog-details-page .bdp-blog-list {
   width: 800px;
   flex-grow: 0;
