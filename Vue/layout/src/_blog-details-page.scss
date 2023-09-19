@@ -58,9 +58,12 @@
         flex-grow: 0;
         flex-shrink: 0;
         flex-basis: 800px;
+
     }
 
     .bdp-blog {
+        margin-bottom: 27px;
+
         &__caption {
             color: vars.$text-caption-color;
             font-family: vars.$font-caption;
@@ -71,5 +74,30 @@
             /* 62.5px */
             letter-spacing: 1px;
         }
+
+        &__content {
+            color: #4D5053;
+            font-family: Jost;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            /* 33px */
+            letter-spacing: 0.22px;
+        }
+
+        &__img {
+            border-radius: 50px;
+            overflow: hidden;
+        }
     }
+
+
+}
+
+.text-reference {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 11px;
 }
