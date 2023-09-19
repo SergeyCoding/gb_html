@@ -253,6 +253,15 @@ details > summary {
   margin: 200px auto 96px;
   border: inherit;
 }
+.blog-details-page__banner {
+  margin-top: 45px;
+  width: 100%;
+  height: 351px;
+  background-origin: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./../img/blog-details-banner.jpg");
+}
 .blog-details-page .bdp-blog-details {
   display: flex;
   gap: 52px;

@@ -1,6 +1,5 @@
 Vue.component('BlogsList', {
   props: { tag: String },
-  name: 'blogs-list',
 
   data() {
     return {
@@ -17,39 +16,13 @@ Vue.component('BlogsList', {
         { blogId: '109', tags: ["Children's Room"] },
         { blogId: '110', tags: ["Children's Room"] },
       ],
-      curTag: '',
-      showBlogs: [],
     };
   },
 
-  methods: {
-    showBlogsUpdate() {},
-    printShowBlogs() {
-      this.showBlogs.forEach((element) => {
-        // console.log('showBlogs: ', element.blogId, element.tags);
-      });
+  computed: {
+    showBlogs() {
+      return this.blogs.filter((v) => v.tags.includes(this.tag)).slice(0, 3);
     },
-  },
-
-  watch: {
-    tag(newValue, oldValue) {
-      console.log(newValue, oldValue);
-      this.curTag = this.tag;
-      this.showBlogs = this.blogs.filter((v) => v.tags.includes(this.curTag)).slice(0, 3);
-      this.printShowBlogs();
-    },
-  },
-
-  created() {
-    this.curTag = this.tag;
-    this.showBlogs = this.blogs.filter((v) => v.tags.includes(this.curTag)).slice(0, 3);
-  },
-
-  beforeUpdate() {
-    console.log('beforeUpdate');
-    this.curTag = this.tag;
-    this.showBlogs = this.blogs.filter((v) => v.tags.includes(this.curTag)).slice(0, 3);
-    this.printShowBlogs();
   },
 
   template: '<div><blog :blogId="b.blogId" v-for="b in showBlogs" :key="b.blogId"  /></div>',

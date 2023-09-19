@@ -89,21 +89,6 @@ Vue.component('Blog', {
     },
   },
 
-  // watch: {
-  //   blogId(newValue, oldValue) {
-  //     console.log('blog', newValue, oldValue);
-  //     this.currentBlog = this.blogs.find((blog) => blog.blogId === this.blogId);
-  //     console.log(this.currentBlog);
-  //   },
-  // },
-
-  // created() {
-  //   console.log('blog', 'created');
-  //   console.log(this.blogs);
-  //   this.currentBlog = this.blogs.filter((blog) => blog.blogId === this.blogId);
-  //   console.log('blog this.currentBlog', this.currentBlog);
-  // },
-
   template: `  
     <div class="bdp-blog">
       <p class="bdp-blog__caption">{{blogTitle}}</p>
