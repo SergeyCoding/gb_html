@@ -1,3 +1,12 @@
+div {
+  border: 1px solid yellowgreen;
+}
+
+.counter__line {
+  border-width: 4px !important;
+  right: -2px !important;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -246,6 +255,63 @@ details > summary {
   line-height: 150%;
   /* 24px */
   text-transform: capitalize;
+}
+
+.blog-details-page {
+  width: 1200px;
+  margin: 200px auto 96px;
+  border: inherit;
+}
+.blog-details-page .bdp-blog-details {
+  display: flex;
+  gap: 52px;
+}
+.blog-details-page .bdp-blog-tags > p {
+  margin-bottom: 24px;
+  color: #292F36;
+  font-family: DM Serif Display;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 31.25px */
+  letter-spacing: 0.5px;
+}
+.blog-details-page .bdp-blog-tags__btn {
+  padding: 9px 30px;
+  margin-right: 10px;
+  margin-top: 11px;
+  border-radius: 10px;
+  background-color: #f4f0ec;
+  color: #292f36;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 22.5px */
+  letter-spacing: 0.36px;
+}
+.blog-details-page .bdp-blog-tags__btn:hover {
+  background-color: #292f36;
+  color: #ffffff;
+}
+.blog-details-page .bdp-blog-list {
+  width: 800px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 800px;
+}
+.blog-details-page .bdp-blog__caption {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 62.5px */
+  letter-spacing: 1px;
 }
 
 html {
