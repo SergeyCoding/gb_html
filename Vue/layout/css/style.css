@@ -248,6 +248,100 @@ details > summary {
   text-transform: capitalize;
 }
 
+.blog-details-page {
+  width: 1200px;
+  margin: 200px auto 96px;
+  border: inherit;
+}
+.blog-details-page__banner {
+  margin-top: 45px;
+  width: 100%;
+  height: 351px;
+  background-origin: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./../img/blog-details-banner.jpg");
+}
+.blog-details-page .bdp-blog-details {
+  display: flex;
+  gap: 52px;
+}
+.blog-details-page .bdp-blog-tags > p {
+  margin-bottom: 24px;
+  color: #292F36;
+  font-family: DM Serif Display;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 31.25px */
+  letter-spacing: 0.5px;
+}
+.blog-details-page .bdp-blog-tags__btn {
+  padding: 9px 30px;
+  margin-right: 10px;
+  margin-top: 11px;
+  border-radius: 10px;
+  background-color: #f4f0ec;
+  color: #292f36;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 22.5px */
+  letter-spacing: 0.36px;
+}
+.blog-details-page .bdp-blog-tags__btn:hover {
+  background-color: #292f36;
+  color: #ffffff;
+}
+.blog-details-page .bdp-blog-tags__btn_active {
+  background-color: #292f36;
+  color: #ffffff;
+}
+.blog-details-page .bdp-blog-list {
+  width: 800px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 800px;
+}
+.blog-details-page .bdp-blog {
+  margin-bottom: 27px;
+}
+.blog-details-page .bdp-blog__caption {
+  color: #292f36;
+  font-family: "DM Serif Display";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 62.5px */
+  letter-spacing: 1px;
+}
+.blog-details-page .bdp-blog__content {
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 33px */
+  letter-spacing: 0.22px;
+}
+.blog-details-page .bdp-blog__img {
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.text-reference {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 11px;
+}
+
 html {
   font-family: "DM Serif Display";
   font-style: normal;
