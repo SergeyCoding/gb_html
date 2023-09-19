@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
-    <script src="./js/components/blogslist.js" defer></script>
+    <script src="./js/components/blog.js" defer></script>
+    <script src="./js/components/blogs-list.js" defer></script>
     <script src="./js/components/blog-details.js" defer></script>
     <script src="./js/back-lines.js" defer></script>
     <title>Interno</title>
@@ -47,8 +48,6 @@
       <!--  -->
       <main class="blog-details-page">
         <blog-details></blog-details>
-        <blogs-list tag="123"></blogs-list>
-        <!-- <blogs-list tag="Kitchen"></blogs-list> -->
         <!--  -->
         <div class="bdp-blog-details">
           <div class="bdp-blog-list">
@@ -174,30 +173,4 @@
       </footer>
     </div>
   </body>
-  <script>
-    Vue.component('BlogsList', {
-      props: ['tag'],
-
-      data() {
-        return {
-          //'Kitchen', 'Bedroom', 'Building', 'Architecture', 'Kitchen Planning', "Children's Room"
-          blogs: [
-            { blog: { title: 'Design sprints are great', content: '<div>content</div>' }, tags: ['Kithen'] },
-            { blog: { title: 'Design sprints are great', content: '<div>content</div>' }, tags: ['Kithen'] },
-            { blog: { title: 'Design sprints are great', content: '<div>content</div>' }, tags: ['Bedroom'] },
-            { blog: { title: 'Design sprints are great', content: '<div>content</div>' }, tags: ['Bedroom'] },
-            { blog: { title: 'Design sprints are great', content: '<div>content</div>' }, tags: ['Building'] },
-            { blog: { title: 'Design sprints are great', content: '<div>content</div>' }, tags: ['Architecture'] },
-            { blog: { title: 'Design sprints are great', content: '<div>content</div>' }, tags: ['Kitchen Planning'] },
-            { blog: { title: 'Design sprints are great', content: '<div>content</div>' }, tags: ['Kitchen Planning'] },
-            { blog: { title: 'Design sprints are great', content: '<div>content</div>' }, tags: ["Children's Room"] },
-            { blog: { title: 'Design sprints are great', content: '<div>content</div>' }, tags: ["Children's Room"] },
-          ],
-        };
-      },
-
-      template: '<div>{{blogs[0].blog.title}}</div>',
-      // template: '<div>{{tag}}</div>',
-    });
-  </script>
 </html>

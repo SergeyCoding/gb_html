@@ -22,7 +22,9 @@ Vue.component('BlogDetails', {
 
   template: `
         <div class="bdp-blog-details">
-            <div class="bdp-blog-list"></div>
+            <div class="bdp-blog-list">
+              <blogs-list :tag="currentTag"></blogs-list>
+            </div>
             <div class="bdp-blog-tags">
                 <p>Tags</p>
                 <button class="bdp-blog-tags__btn" :class="currentTag===btntag?'bdp-blog-tags__btn_active':''" @click="setCurrentTag(btntag)" v-for="(btntag) in tags" :key="btntag">{{btntag}}</button>
