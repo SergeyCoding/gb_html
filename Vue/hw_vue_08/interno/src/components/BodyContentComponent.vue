@@ -1,5 +1,12 @@
+<template>
+  <div class="body-content">
+    <BackLines></BackLines>
+    <slot></slot>
+  </div>
+</template>
+
 <script>
-import BackLines from './BackLinesComponent.vue';
+import BackLines from './BodyContent/BackLinesComponent.vue';
 
 export default {
   name: 'BodyContent',
@@ -14,12 +21,5 @@ export default {
   methods: {},
 };
 </script>
-
-<template>
-  <div class="body-content">
-    <BackLines></BackLines>
-    <slot></slot>
-  </div>
-</template>
 
 <style lang="scss" scoped></style>

@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer__left">
       <div class="footer__logo">
-        <img src="./img/Logo.png" alt="" />
+        <img src="/img/Logo.png" alt="" />
         <p>Interno</p>
       </div>
       <p>It is a long established fact that a reader will be distracted lookings.</p>

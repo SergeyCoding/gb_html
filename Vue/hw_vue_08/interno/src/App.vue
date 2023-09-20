@@ -1,7 +1,7 @@
 <script setup>
 import BodyContent from './components/BodyContentComponent.vue';
-import Header from './components/HeaderComponent.vue';
-import Footer from './components/FooterComponents.vue';
+import Header from './components/BodyContent/HeaderComponent.vue';
+import Footer from './components/BodyContent/FooterComponents.vue';
 </script>
 
 <template>
