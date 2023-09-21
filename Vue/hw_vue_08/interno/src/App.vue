@@ -2,6 +2,7 @@
   <div id="app">
     <BodyContent>
       <Header></Header>
+      <BlogDetailPage></BlogDetailPage>
       <Footer></Footer>
     </BodyContent>
   </div>
@@ -11,10 +12,11 @@
 import BodyContent from './components/BodyContentComponent.vue';
 import Header from './components/BodyContent/HeaderComponent.vue';
 import Footer from './components/BodyContent/FooterComponent.vue';
+import BlogDetailPage from './components/BlogDetailsPage/BlogDetailsPageComponent.vue';
 
 export default {
   name: 'App',
-  components: { BodyContent, Header, Footer },
+  components: { BodyContent, Header, Footer, BlogDetailPage },
 };
 </script>
 
