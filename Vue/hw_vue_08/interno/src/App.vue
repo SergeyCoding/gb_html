@@ -11,4 +11,6 @@ import Footer from './components/BodyContent/FooterComponents.vue';
   </BodyContent>
 </template>
 
-<style scoped></style>
+<style lang="scss">
+@import './scss/style.scss';
+</style>

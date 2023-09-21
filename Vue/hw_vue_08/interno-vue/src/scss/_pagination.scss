@@ -1,0 +1,40 @@
+@use './vars';
+
+.pagination {
+    width: 50%;
+    margin: 50px auto 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    &__item {
+        position: relative;
+        cursor: pointer;
+
+        svg {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+    }
+
+    &__number {
+        width: 52px;
+        height: 52px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: vars.$text-caption-color;
+        font-family: vars.$font-base;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        /* 24px */
+        text-transform: capitalize;
+    }
+
+}
