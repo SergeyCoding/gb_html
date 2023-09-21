@@ -43,7 +43,7 @@ a {
 
   &__logo {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 10px;
 
     &_img {
@@ -375,12 +375,12 @@ a {
 
   display: flex;
   justify-content: space-between;
-  align-self: start;
+  align-self: flex-start;
   gap: 101px;
 
   &__logo {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
 

@@ -1,18 +1,16 @@
 <template>
   <div class="bdp-blog">
-    <p class="bdp-blog__caption">{{ blogTitle }}</p>
-    <div class="bdp-blog__content" v-html="blogContent" />
+    <p class="bdp-blog__caption">{{ blog.title }}</p>
+    <div class="bdp-blog__content" v-html="blog.content" />
   </div>
 </template>
 
 <script>
-import { getBlogs } from '../../data/data.js';
-
 export default {
   name: 'BlogComponent',
 
   props: {
-    blogId: String,
+    blog: { blogId: String, title: String, content: String, tags: [String] },
   },
 
   data() {
@@ -22,17 +20,6 @@ export default {
   mounted() {},
 
   methods: {},
-
-  computed: {
-    blogTitle() {
-      const curBlog = getBlogs().find((blog) => blog.blogId === this.blogId);
-      return curBlog.title;
-    },
-    blogContent() {
-      const curBlog = getBlogs().find((blog) => blog.blogId === this.blogId);
-      return curBlog.content;
-    },
-  },
 };
 </script>
 

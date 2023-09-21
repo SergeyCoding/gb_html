@@ -1,3 +1,7 @@
+/**
+ *
+ * @returns { [{blogId: string, title: string, content: string, tags: [string]}] }
+ */
 export function getBlogs() {
   return [
     {
@@ -23,6 +27,7 @@ export function getBlogs() {
               <p>The details are not the details. They make the design.</p>
             </div>
             `,
+      tags: ['Kitchen'],
     },
     {
       blogId: '102',
@@ -59,14 +64,39 @@ export function getBlogs() {
         Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular
         belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
       </p>`,
+      tags: ['Kitchen'],
     },
-    { blogId: '103', title: 'title 103', content: 'content 103' },
-    { blogId: '104', title: 'title 104', content: 'content 104' },
-    { blogId: '105', title: 'title 105', content: 'content 105' },
-    { blogId: '106', title: 'title 106', content: 'content 106' },
-    { blogId: '107', title: 'title 107', content: 'content 107' },
-    { blogId: '108', title: 'title 108', content: 'content 108' },
-    { blogId: '109', title: 'title 109', content: 'content 109' },
-    { blogId: '110', title: 'title 110', content: 'content 110' },
+    { blogId: '103', title: 'title 103', content: 'content 103', tags: ['Bedroom'] },
+    { blogId: '104', title: 'title 104', content: 'content 104', tags: ['Bedroom'] },
+    { blogId: '105', title: 'title 105', content: 'content 105', tags: ['Building', 'Bedroom'] },
+    { blogId: '106', title: 'title 106', content: 'content 106', tags: ['Architecture'] },
+    { blogId: '107', title: 'title 107', content: 'content 107', tags: ['Kitchen Planning'] },
+    { blogId: '108', title: 'title 108', content: 'content 108', tags: ['Kitchen Planning'] },
+    { blogId: '109', title: 'title 109', content: 'content 109', tags: ["Children's Room"] },
+    { blogId: '110', title: 'title 110', content: 'content 110', tags: ["Children's Room"] },
+    // { blogId: '111', title: 'title 111', content: 'content 111', tags: ["Children's Room", '111'] },
   ];
+}
+
+export function getTags() {
+  const result = ['Kitchen'];
+
+  const blogs = getBlogs();
+  for (let i = 0; i < blogs.length; i++) {
+    blogs[i].tags.forEach((x) => {
+      if (!result.includes(x)) {
+        result.push(x);
+      }
+    });
+  }
+
+  return result;
+}
+
+/**
+ *
+ * @param {string} tag
+ */
+export function getBlogsByTag(tag) {
+  return getBlogs().filter((x) => x.tags.includes(tag));
 }

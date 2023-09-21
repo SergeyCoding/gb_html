@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import { getTags } from '../../data/data';
 import BlogListComponent from './BlogListComponent.vue';
 
 export default {
@@ -27,13 +28,15 @@ export default {
   data() {
     return {
       currentTag: '',
-      tags: ['Kitchen', 'Bedroom', 'Building', 'Architecture', 'Kitchen Planning', "Children's Room"],
+      // tags: ['Kitchen', 'Bedroom', 'Building', 'Architecture', 'Kitchen Planning', "Children's Room"],
+      tags: [],
     };
   },
 
   components: { BlogListComponent },
 
   mounted() {
+    this.tags = getTags();
     this.currentTag = this.tags[0];
   },
 
