@@ -5,7 +5,7 @@ export function getBlogs() {
       title: 'Let’s Get Solution for Building Construction Work',
       content: `
             <div class="bdp-blog__img">
-              <img src="/img/blog-details-img01.png" alt="" />
+              <img src="${require('@/assets/img/blog-details-img01.png')}" alt="" />
             </div>
             <div class="bdp-blog__date">
               <p>26 December,2022</p>
@@ -53,7 +53,7 @@ export function getBlogs() {
         </p>
       </div>
       <div class="bdp-blog__img">
-        <img src="/img/blog-details-img02.png" alt="" />
+        <img src="${require('@/assets/img/blog-details-img02.png')}" alt="" />
       </div>
       <p>
         Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular
