@@ -1,6 +1,11 @@
 <template>
   <div class="back-lines">
-    <div class="back-line" :style="{ left: `calc((100% - 1200px) / 2 + ${x}px)` }" v-for="x in lineList"></div>
+    <div
+      class="back-line"
+      :style="{ left: `calc((100% - 1200px) / 2 + ${x}px)` }"
+      v-for="x in lineList"
+      :key="`key${x}`"
+    ></div>
   </div>
 </template>
 

@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header__logo">
       <div class="header__logo_img">
-        <img src="/img/Logo.png" alt="" />
+        <img src="@/assets/img/Logo.png" alt="" />
       </div>
       <p class="header__caption">Interno</p>
     </div>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'Header',
+  name: 'HeaderComponent',
 
   data() {
     return {};
