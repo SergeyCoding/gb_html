@@ -3,19 +3,21 @@
     <section class="blog-details-page__banner"></section>
     <!--  -->
     <main class="blog-details-page">
-      <p>blog-details-page</p>
-      <!-- <blog-details></blog-details> -->
+      <BlogDetails></BlogDetails>
     </main>
   </div>
 </template>
 
 <script>
+import BlogDetails from './BlogDetailsComponent.vue';
 export default {
   name: 'BlogDetailsPageComponent',
 
   data() {
     return {};
   },
+
+  components: { BlogDetails },
 
   mounted() {},
 
