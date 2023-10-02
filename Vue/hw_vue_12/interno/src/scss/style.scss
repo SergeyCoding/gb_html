@@ -3,8 +3,9 @@
 // @import "test";
 @import "reset";
 @import "./blog-page";
-@import './pagination';
-@import './blog-details-page';
+@import "./pagination";
+@import "./blog-details-page";
+@import "./project-page";
 
 html {
   font-family: vars.$font-caption;
@@ -12,7 +13,6 @@ html {
   font-weight: 400;
   // font-size: 14px;
 }
-
 
 a {
   color: inherit;
@@ -29,7 +29,7 @@ a {
     position: absolute;
     // left: calc((100% - 1200px) / 2);
 
-    border-left: 1px #E6E6E6 solid;
+    border-left: 1px #e6e6e6 solid;
     z-index: -100;
   }
 }
@@ -316,7 +316,7 @@ a {
     border: 1px solid #e7e7e7;
     box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
 
-    >p {
+    > p {
       width: 305px;
       margin-bottom: calc(30px + 52px + 30px);
       color: vars.$text-caption-color;
@@ -396,7 +396,7 @@ a {
   &__left {
     width: 393px;
 
-    >p {
+    > p {
       margin-top: 18px;
       color: #4d5053;
       font-family: vars.$font-base;
@@ -412,7 +412,7 @@ a {
   &__socials {
     margin-top: 31px;
 
-    >a {
+    > a {
       margin-right: 54px;
     }
   }

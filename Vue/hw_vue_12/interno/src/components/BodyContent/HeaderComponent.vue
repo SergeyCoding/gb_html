@@ -8,13 +8,13 @@
     </div>
 
     <menu class="menu">
-      <a href="#">
+      <a @click="goToPage('Home')" href="#">
         <p>Home</p>
       </a>
-      <a href="#">
+      <a @click="goToPage('Project')" href="#">
         <p>Project</p>
       </a>
-      <a href="blog.html">
+      <a @click="goToPage('Blog')" href="#">
         <p>Blog</p>
       </a>
     </menu>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'HeaderComponent',
+  name: "HeaderComponent",
 
   data() {
     return {};
@@ -31,7 +31,11 @@ export default {
 
   mounted() {},
 
-  methods: {},
+  methods: {
+    goToPage(page) {
+      this.$emit("change-page", page);
+    },
+  },
 };
 </script>
 
