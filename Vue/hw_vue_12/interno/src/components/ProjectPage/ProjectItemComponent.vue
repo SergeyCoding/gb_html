@@ -1,6 +1,6 @@
 <template>
-  <div :style="[styleWidth]">
-    <div class="img-container" :style="[styleWidth, styleHeight]">
+  <div class="project-item" :style="[styleWidth]">
+    <div :style="[styleWidth, styleHeight]">
       <img :src="imgSrc" :alt="imgAlt" />
     </div>
     <div class="description">
@@ -31,8 +31,13 @@ export default {
   },
 
   mounted() {
-    this.styleWidth.width = this.imgWidth + "px";
-    this.styleHeight.height = this.imgHeight + "px";
+    if (this.imgWidth > 0) {
+      this.styleWidth.width = this.imgWidth + "px";
+    }
+
+    if (this.imgHeight > 0) {
+      this.styleHeight.height = this.imgHeight + "px";
+    }
   },
 
   computed: {},
@@ -42,9 +47,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use "./../../scss/vars";
 .title {
-  color: #292f36;
-  font-family: DM Serif Display;
+  color: vars.$text-caption-color;
+  font-family: vars.$font-caption;
   font-size: 25px;
   font-style: normal;
   font-weight: 400;
@@ -52,19 +58,20 @@ export default {
   letter-spacing: 0.5px;
 }
 .text {
-  color: #4d5053;
-  font-family: Jost;
+  color: vars.$text-color;
+  font-family: vars.$font-base;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 33px */
   letter-spacing: 0.22px;
 }
-.img-container {
-  background-color: gray;
-}
 
 .description {
   margin-top: 24px;
+}
+
+.project-item {
+  margin-top: 40px;
 }
 </style>

@@ -13,29 +13,14 @@
     </div>
     <!--  -->
     <main class="project-page">
-      <ProjectItemComponent
-        :img-width="585"
-        :img-height="853"
-        :img-src="require('@/assets/img/project-photo01.png')"
-        img-alt="project 1-01"
-        title="Minimal Bedroom table"
-        breadcrumbs="Decor / Artchitecture"
-      />
-      <ProjectItemComponent
-        :img-width="585"
-        :img-height="853"
-        img-src="''"
-        img-alt="project 1-01"
-        title="Minimal Bedroom table"
-        breadcrumbs="Decor / Artchitecture"
-      />
+      <ProjectsListComponent />
     </main>
   </div>
 </template>
 
 <script>
 import CategoriesComponent from "./CategoriesComponent.vue";
-import ProjectItemComponent from "./ProjectItemComponent.vue";
+import ProjectsListComponent from "./ProjectsListComponent.vue";
 
 export default {
   name: "ProjectPageComponent",
@@ -44,7 +29,7 @@ export default {
   },
   mounted() {},
   methods: {},
-  components: { CategoriesComponent, ProjectItemComponent },
+  components: { CategoriesComponent, ProjectsListComponent },
 };
 </script>
 
