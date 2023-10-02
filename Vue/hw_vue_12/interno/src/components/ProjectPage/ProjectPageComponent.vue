@@ -20,7 +20,15 @@
         img-alt="project 1-01"
         title="Minimal Bedroom table"
         breadcrumbs="Decor / Artchitecture"
-      ></ProjectItemComponent>
+      />
+      <ProjectItemComponent
+        :img-width="585"
+        :img-height="853"
+        img-src="''"
+        img-alt="project 1-01"
+        title="Minimal Bedroom table"
+        breadcrumbs="Decor / Artchitecture"
+      />
     </main>
   </div>
 </template>
