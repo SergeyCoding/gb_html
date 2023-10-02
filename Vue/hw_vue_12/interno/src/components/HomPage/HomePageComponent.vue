@@ -34,28 +34,28 @@
         <div class="projects__list">
           <div class="projects__item">
             <div class="border-top-right">
-              <img src="./img/project01.png" alt="1" />
+              <img src="@/assets/img/project01.png" alt="1" />
             </div>
             <h3>Modern Kitchan</h3>
             <p>Decor / Artchitecture</p>
           </div>
           <div class="projects__item">
             <div class="border-top-left">
-              <img src="./img/project02.png" alt="2" />
+              <img src="@/assets/img/project02.png" alt="2" />
             </div>
             <h3>Modern Kitchan</h3>
             <p>Decor / Artchitecture</p>
           </div>
           <div class="projects__item">
             <div class="border-bottom-right">
-              <img src="./img/project03.png" alt="3" />
+              <img src="@/assets/img/project03.png" alt="3" />
             </div>
             <h3>Modern Kitchan</h3>
             <p>Decor / Artchitecture</p>
           </div>
           <div class="projects__item">
             <div class="border-bottom-left">
-              <img src="./img/project04.png" alt="4" />
+              <img src="@/assets/img/project04.png" alt="4" />
             </div>
             <h3>Modern Kitchan</h3>
             <p>Decor / Artchitecture</p>
@@ -63,64 +63,32 @@
         </div>
       </div>
     </main>
-    <!--  -->
-    <section class="counter">
-      <div class="counter__content">
-        <div class="counter__item" v-for="(c, i) in arr">
-          <p>{{ c.count }}</p>
-          <p class="counter__text">{{ c.name }}</p>
-          <div class="counter__line" v-if="i < arr.length - 1"></div>
-        </div>
-      </div>
-    </section>
-    <!--  -->
-    <section class="blog">
-      <div class="projects__heading">
-        <h2>Articles & News</h2>
-        <p>
-          It is a long established fact that a reader will be distracted by the of readable content of a page when
-          lookings at its layouts the points of using.
-        </p>
-      </div>
-      <div class="blog__list">
-        <div class="blog__item" :class="{ blog__item_selected: blog.isSelected }" v-for="(blog, i) in blogs" :key="i">
-          <div class="blog__pic">
-            <img :src="blog.img" :alt="blog.alt" />
-          </div>
-          <p>{{ blog.text }}<br />{{ blog.text2 }}</p>
-          <div class="blog__nav">
-            <p>26 December,2022</p>
-            <a href="blog-details.html">
-              <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
-                <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                <path
-                  d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813"
-                  stroke="#292F36"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- counter -->
+    <CounterComponent></CounterComponent>
+
+    <!-- blog  -->
+    <BlogComponent />
+
     <!--  -->
   </div>
 </template>
 
 <script>
+import BlogComponent from "./BlogComponent.vue";
+import CounterComponent from "./CounterComponent.vue";
+
 export default {
   name: "HomePageComponent",
-
   data() {
     return {};
   },
-
   mounted() {},
-
-  methods: {},
+  methods: {
+    revert() {
+      this.message = this.message.split("").reverse().join("");
+    },
+  },
+  components: { CounterComponent, BlogComponent },
 };
 </script>
 
