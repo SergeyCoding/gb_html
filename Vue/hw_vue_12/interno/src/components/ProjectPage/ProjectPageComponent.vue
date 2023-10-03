@@ -9,11 +9,12 @@
     </section>
     <!--  -->
     <div class="categories">
-      <CategoriesComponent />
+      <CategoriesComponent @change-category="changeCategory" />
     </div>
     <!--  -->
     <main class="project-page">
-      <ProjectsListComponent />
+      <ProjectsListComponent :current-projects="currentCategory" />
+      <PaginationComponent></PaginationComponent>
     </main>
   </div>
 </template>
@@ -21,15 +22,22 @@
 <script>
 import CategoriesComponent from "./CategoriesComponent.vue";
 import ProjectsListComponent from "./ProjectsListComponent.vue";
+import PaginationComponent from "../PaginationComponent.vue";
 
 export default {
   name: "ProjectPageComponent",
   data() {
-    return {};
+    return {
+      currentCategory: "",
+    };
   },
   mounted() {},
-  methods: {},
-  components: { CategoriesComponent, ProjectsListComponent },
+  methods: {
+    changeCategory(category) {
+      this.currentCategory = category;
+    },
+  },
+  components: { CategoriesComponent, ProjectsListComponent, PaginationComponent },
 };
 </script>
 

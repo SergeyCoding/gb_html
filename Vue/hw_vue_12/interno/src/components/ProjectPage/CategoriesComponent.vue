@@ -21,7 +21,9 @@ export default {
     };
   },
 
-  mounted() {},
+  mounted() {
+    this.select(this.selected);
+  },
 
   methods: {
     isSelected(index) {
@@ -29,6 +31,7 @@ export default {
     },
     select(index) {
       this.selected = index;
+      this.$emit("change-category", this.categories[this.selected]);
     },
   },
   computed: {},

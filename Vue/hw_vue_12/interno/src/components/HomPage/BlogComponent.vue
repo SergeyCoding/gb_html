@@ -70,7 +70,6 @@ export default {
 
   computed: {
     isSelected(v) {
-      console.log("v", v);
       if (v) {
         return "blog__item_selected";
       }
