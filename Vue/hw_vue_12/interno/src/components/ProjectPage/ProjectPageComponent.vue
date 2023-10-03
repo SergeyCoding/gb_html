@@ -14,6 +14,7 @@
     <!--  -->
     <main class="project-page">
       <ProjectsListComponent :current-projects="currentCategory" />
+      <PaginationComponent></PaginationComponent>
     </main>
   </div>
 </template>
@@ -21,6 +22,7 @@
 <script>
 import CategoriesComponent from "./CategoriesComponent.vue";
 import ProjectsListComponent from "./ProjectsListComponent.vue";
+import PaginationComponent from "../PaginationComponent.vue";
 
 export default {
   name: "ProjectPageComponent",
@@ -35,7 +37,7 @@ export default {
       this.currentCategory = category;
     },
   },
-  components: { CategoriesComponent, ProjectsListComponent },
+  components: { CategoriesComponent, ProjectsListComponent, PaginationComponent },
 };
 </script>
 
