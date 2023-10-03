@@ -4,8 +4,22 @@
       <img :src="imgSrc" :alt="imgAlt" />
     </div>
     <div class="description">
-      <h2 class="title">{{ title }}</h2>
-      <p class="text">{{ breadcrumbs }}</p>
+      <div>
+        <h2 class="title">{{ title }}</h2>
+        <p class="text">{{ breadcrumbs }}</p>
+      </div>
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+          <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
+          <path
+            d="M32 44L40 35L32 26"
+            stroke="#292F36"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
     </div>
   </div>
 </template>
@@ -69,9 +83,15 @@ export default {
 
 .description {
   margin-top: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .project-item {
   margin-top: 40px;
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 </style>
