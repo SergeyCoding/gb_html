@@ -1,15 +1,29 @@
 <template>
-  <div>
-    <ProjectItemComponent
-      :img-width="x.imgWidth"
-      :img-height="x.imgHeight"
-      :img-src="x.imgSrc"
-      :img-alt="x.imgAlt"
-      title="Minimal Bedroom table"
-      breadcrumbs="Decor / Artchitecture"
-      v-for="x in items"
-      :key="x.id"
-    />
+  <div class="project-list">
+    <div class="left">
+      <ProjectItemComponent
+        :img-width="x.imgWidth"
+        :img-height="x.imgHeight"
+        :img-src="x.imgSrc"
+        :img-alt="x.imgAlt"
+        :title="x.title"
+        :breadcrumbs="x.breadcrumbs"
+        v-for="x in leftSide"
+        :key="x.id"
+      />
+    </div>
+    <div class="right">
+      <ProjectItemComponent
+        :img-width="x.imgWidth"
+        :img-height="x.imgHeight"
+        :img-src="x.imgSrc"
+        :img-alt="x.imgAlt"
+        :title="x.title"
+        :breadcrumbs="x.breadcrumbs"
+        v-for="x in rightSide"
+        :key="x.id"
+      />
+    </div>
   </div>
 </template>
 
@@ -99,7 +113,20 @@ export default {
   mounted() {},
   methods: {},
   components: { ProjectItemComponent },
+  computed: {
+    leftSide() {
+      return this.items.filter((v, i) => i % 2 === 0);
+    },
+    rightSide() {
+      return this.items.filter((v, i) => i % 2 === 1);
+    },
+  },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.project-list {
+  display: flex;
+  justify-content: space-between;
+}
+</style>

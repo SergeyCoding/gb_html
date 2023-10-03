@@ -73,5 +73,7 @@ export default {
 
 .project-item {
   margin-top: 40px;
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 </style>
