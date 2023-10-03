@@ -41,7 +41,7 @@ export default {
     };
   },
   mounted() {
-    this.currentPage = this.pages[2];
+    this.currentPage = this.pages[1];
   },
   methods: {
     onChangePage(page) {

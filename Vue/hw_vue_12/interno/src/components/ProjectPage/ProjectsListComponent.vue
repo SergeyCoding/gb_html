@@ -39,34 +39,37 @@ export default {
   },
   data() {
     return {
-      currentPage: 0,
+      currentPage: 1,
       pageLimit: 8,
     };
   },
   mounted() {},
   methods: {
     projects() {
+      // categories: ["Bathroom", "Bed Room", "Kitchen", "Living Area"],
+      console.log("this.currentProjects", this.currentProjects);
       switch (this.currentProjects) {
-        case "Bathrooms":
+        case "Bathroom":
           return getBathrooms(this.currentPage, this.pageLimit);
-        case "Bedrooms":
+        case "Bed Room":
           return getBedrooms(this.currentPage, this.pageLimit);
-        case "Kitchens":
+        case "Kitchen":
           return getKitchens(this.currentPage, this.pageLimit);
-        case "LivingArea":
+        case "Living Area":
           return getLivingAreas(this.currentPage, this.pageLimit);
       }
-      return [];
+      return { data: [], pages: 0 };
     },
   },
   components: { ProjectItemComponent },
   computed: {
     leftSide() {
-      console.log(this.projects());
-      return this.projects().filter((v, i) => i % 2 === 0);
+      const p = this.projects();
+      return p.data.filter((_, i) => i % 2 === 0);
     },
     rightSide() {
-      return this.projects().filter((v, i) => i % 2 === 1);
+      const p = this.projects();
+      return p.data.filter((_, i) => i % 2 === 1);
     },
   },
 };

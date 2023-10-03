@@ -9,11 +9,11 @@
     </section>
     <!--  -->
     <div class="categories">
-      <CategoriesComponent />
+      <CategoriesComponent @change-category="changeCategory" />
     </div>
     <!--  -->
     <main class="project-page">
-      <ProjectsListComponent :current-projects="currentProjects" />
+      <ProjectsListComponent :current-projects="currentCategory" />
     </main>
   </div>
 </template>
@@ -26,11 +26,16 @@ export default {
   name: "ProjectPageComponent",
   data() {
     return {
-      currentProjects: "Bedrooms",
+      currentCategory: "",
     };
   },
   mounted() {},
-  methods: {},
+  methods: {
+    changeCategory(category) {
+      console.log("changeCategory", category);
+      this.currentCategory = category;
+    },
+  },
   components: { CategoriesComponent, ProjectsListComponent },
 };
 </script>

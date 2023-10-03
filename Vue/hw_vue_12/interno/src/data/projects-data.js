@@ -230,7 +230,7 @@ export function getProjects() {
         imgSrc: require("@/assets/img/project-photo01.png"),
         imgAlt: "project 1 1",
         title: "Minimal Bedroom table",
-        breadcrumbs: "Decor / Artchitecture",
+        breadcrumbs: "Living Area / Artchitecture",
       },
       {
         id: 2,
@@ -239,7 +239,7 @@ export function getProjects() {
         imgSrc: require("@/assets/img/project-photo02.png"),
         imgAlt: "project 1 1",
         title: "Minimal Bedroom table",
-        breadcrumbs: "Decor / Artchitecture",
+        breadcrumbs: "Living Area / Artchitecture",
       },
       {
         id: 3,
@@ -248,7 +248,7 @@ export function getProjects() {
         imgSrc: require("@/assets/img/project-photo03.png"),
         imgAlt: "project 1 1",
         title: "Classic Minimal Bedroom",
-        breadcrumbs: "Decor / Artchitecture",
+        breadcrumbs: "Living Area / Artchitecture",
       },
       {
         id: 4,
@@ -257,7 +257,7 @@ export function getProjects() {
         imgSrc: require("@/assets/img/project-photo04.png"),
         imgAlt: "project 1 1",
         title: "Modern Bedroom",
-        breadcrumbs: "Decor / Artchitecture",
+        breadcrumbs: "Living Area / Artchitecture",
       },
       {
         id: 5,
@@ -266,7 +266,7 @@ export function getProjects() {
         imgSrc: require("@/assets/img/project-photo05.png"),
         imgAlt: "project 1 1",
         title: "Minimal Bedroom table",
-        breadcrumbs: "Decor / Artchitecture",
+        breadcrumbs: "Living Area / Artchitecture",
       },
       {
         id: 6,
@@ -275,7 +275,7 @@ export function getProjects() {
         imgSrc: require("@/assets/img/project-photo06.png"),
         imgAlt: "project 1 1",
         title: "System Table",
-        breadcrumbs: "Decor / Artchitecture",
+        breadcrumbs: "Living Area / Artchitecture",
       },
       {
         id: 7,
@@ -284,7 +284,7 @@ export function getProjects() {
         imgSrc: require("@/assets/img/project-photo07.png"),
         imgAlt: "project 1 1",
         title: "Modern Medroom",
-        breadcrumbs: "Decor / Artchitecture",
+        breadcrumbs: "Living Area / Artchitecture",
       },
       {
         id: 8,
@@ -293,7 +293,7 @@ export function getProjects() {
         imgSrc: require("@/assets/img/project-photo08.png"),
         imgAlt: "project 1 1",
         title: "Modern Bedroom",
-        breadcrumbs: "Decor / Artchitecture",
+        breadcrumbs: "Living Area / Artchitecture",
       },
     ],
   };
@@ -312,13 +312,13 @@ export function getLivingAreas(page, pageLimit) {
   return getData(getProjects().livingAreas, page, pageLimit);
 }
 
-function getData(data, page, pageLimit) {
+function getData(projects, page, pageLimit) {
   const result = { data: [], pages: 0 };
 
-  result.pages = data.length / pageLimit + 1;
+  result.pages = projects.length / pageLimit + 1;
 
-  for (let i = (page - 1) * pageLimit; i < data.length; i++) {
-    const element = data[i];
+  for (let i = (page - 1) * pageLimit; i < projects.length; i++) {
+    const element = projects[i];
     result.data.push(element);
     if (i >= page * pageLimit) {
       break;
