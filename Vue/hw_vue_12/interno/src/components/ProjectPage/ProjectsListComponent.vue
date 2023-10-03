@@ -29,96 +29,44 @@
 
 <script>
 import ProjectItemComponent from "./ProjectItemComponent.vue";
+import { getBathrooms, getBedrooms, getKitchens, getLivingAreas } from "./../../data/projects-data.js";
 
 export default {
   name: "ProjectsListComponent",
+
+  props: {
+    currentProjects: String,
+  },
   data() {
     return {
-      items: [
-        {
-          id: 1,
-          imgWidth: 585,
-          imgHeight: 0,
-          imgSrc: require("@/assets/img/project-photo01.png"),
-          imgAlt: "project 1 1",
-          title: "Minimal Bedroom table",
-          breadcrumbs: "Decor / Artchitecture",
-        },
-        {
-          id: 2,
-          imgWidth: 585,
-          imgHeight: 0,
-          imgSrc: require("@/assets/img/project-photo02.png"),
-          imgAlt: "project 1 1",
-          title: "Minimal Bedroom table",
-          breadcrumbs: "Decor / Artchitecture",
-        },
-        {
-          id: 3,
-          imgWidth: 585,
-          imgHeight: 0,
-          imgSrc: require("@/assets/img/project-photo03.png"),
-          imgAlt: "project 1 1",
-          title: "Classic Minimal Bedroom",
-          breadcrumbs: "Decor / Artchitecture",
-        },
-        {
-          id: 4,
-          imgWidth: 585,
-          imgHeight: 0,
-          imgSrc: require("@/assets/img/project-photo04.png"),
-          imgAlt: "project 1 1",
-          title: "Modern Bedroom",
-          breadcrumbs: "Decor / Artchitecture",
-        },
-        {
-          id: 5,
-          imgWidth: 585,
-          imgHeight: 0,
-          imgSrc: require("@/assets/img/project-photo05.png"),
-          imgAlt: "project 1 1",
-          title: "Minimal Bedroom table",
-          breadcrumbs: "Decor / Artchitecture",
-        },
-        {
-          id: 6,
-          imgWidth: 585,
-          imgHeight: 0,
-          imgSrc: require("@/assets/img/project-photo06.png"),
-          imgAlt: "project 1 1",
-          title: "System Table",
-          breadcrumbs: "Decor / Artchitecture",
-        },
-        {
-          id: 7,
-          imgWidth: 585,
-          imgHeight: 0,
-          imgSrc: require("@/assets/img/project-photo07.png"),
-          imgAlt: "project 1 1",
-          title: "Modern Medroom",
-          breadcrumbs: "Decor / Artchitecture",
-        },
-        {
-          id: 8,
-          imgWidth: 585,
-          imgHeight: 0,
-          imgSrc: require("@/assets/img/project-photo08.png"),
-          imgAlt: "project 1 1",
-          title: "Modern Bedroom",
-          breadcrumbs: "Decor / Artchitecture",
-        },
-      ],
+      currentPage: 0,
+      pageLimit: 8,
     };
   },
   mounted() {},
-  methods: {},
+  methods: {
+    projects() {
+      switch (this.currentProjects) {
+        case "Bathrooms":
+          return getBathrooms(this.currentPage, this.pageLimit);
+        case "Bedrooms":
+          return getBedrooms(this.currentPage, this.pageLimit);
+        case "Kitchens":
+          return getKitchens(this.currentPage, this.pageLimit);
+        case "LivingArea":
+          return getLivingAreas(this.currentPage, this.pageLimit);
+      }
+      return [];
+    },
+  },
   components: { ProjectItemComponent },
   computed: {
     leftSide() {
-      return this.items.filter((v, i) => i % 2 === 0);
+      console.log(this.projects());
+      return this.projects().filter((v, i) => i % 2 === 0);
     },
     rightSide() {
-      return this.items.filter((v, i) => i % 2 === 1);
+      return this.projects().filter((v, i) => i % 2 === 1);
     },
   },
 };

@@ -13,7 +13,7 @@
     </div>
     <!--  -->
     <main class="project-page">
-      <ProjectsListComponent />
+      <ProjectsListComponent :current-projects="currentProjects" />
     </main>
   </div>
 </template>
@@ -25,7 +25,9 @@ import ProjectsListComponent from "./ProjectsListComponent.vue";
 export default {
   name: "ProjectPageComponent",
   data() {
-    return {};
+    return {
+      currentProjects: "Bedrooms",
+    };
   },
   mounted() {},
   methods: {},
