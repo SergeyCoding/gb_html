@@ -32,7 +32,6 @@ export default {
   mounted() {},
   methods: {
     changeCategory(category) {
-      console.log("changeCategory", category);
       this.currentCategory = category;
     },
   },

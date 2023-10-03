@@ -47,7 +47,6 @@ export default {
   methods: {
     projects() {
       // categories: ["Bathroom", "Bed Room", "Kitchen", "Living Area"],
-      console.log("this.currentProjects", this.currentProjects);
       switch (this.currentProjects) {
         case "Bathroom":
           return getBathrooms(this.currentPage, this.pageLimit);
