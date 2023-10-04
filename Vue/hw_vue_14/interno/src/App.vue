@@ -13,6 +13,7 @@
       <BlogPageComponent @change-page="onChangePage" v-if="currentPage === 'Blog'"></BlogPageComponent>
 
       <BlogDetailsPageComponent v-if="currentPage === 'BlogDetails'"></BlogDetailsPageComponent>
+      <ProjectDetailsPageComponent v-if="currentPage === 'ProjectDetails'" />
 
       <Footer></Footer>
     </BodyContent>
@@ -20,16 +21,17 @@
 </template>
 
 <script>
-import BodyContent from './components/BodyContentComponent.vue';
-import Header from './components/BodyContent/HeaderComponent.vue';
-import Footer from './components/BodyContent/FooterComponent.vue';
-import ProjectPageComponent from './components/ProjectPage/ProjectPageComponent.vue';
-import HomePageComponent from './components/HomPage/HomePageComponent.vue';
-import BlogDetailsPageComponent from './components/BlogDetailsPage/BlogDetailsPageComponent.vue';
-import BlogPageComponent from './components/BlogPage/BlogPageComponent.vue';
+import BodyContent from "./components/BodyContentComponent.vue";
+import Header from "./components/BodyContent/HeaderComponent.vue";
+import Footer from "./components/BodyContent/FooterComponent.vue";
+import ProjectPageComponent from "./components/ProjectPage/ProjectPageComponent.vue";
+import HomePageComponent from "./components/HomPage/HomePageComponent.vue";
+import BlogDetailsPageComponent from "./components/BlogDetailsPage/BlogDetailsPageComponent.vue";
+import BlogPageComponent from "./components/BlogPage/BlogPageComponent.vue";
+import ProjectDetailsPageComponent from "./components/ProjectDetailsPage/ProjectDetailsPageComponent.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     BodyContent,
     Header,
@@ -38,15 +40,16 @@ export default {
     HomePageComponent,
     BlogDetailsPageComponent,
     BlogPageComponent,
+    ProjectDetailsPageComponent,
   },
   data() {
     return {
-      pages: ['Home', 'Project', 'Blog', 'BlogDetails'],
-      currentPage: 'Project',
+      pages: ["Home", "Project", "Blog", "BlogDetails", "ProjectDetails"],
+      currentPage: "Project",
     };
   },
   mounted() {
-    this.currentPage = this.pages[1];
+    this.currentPage = this.pages[4];
   },
   methods: {
     onChangePage(page) {
@@ -58,5 +61,5 @@ export default {
 
 <style lang="scss">
 // @import "./scss/test";
-@import './scss/style';
+@import "./scss/style";
 </style>
