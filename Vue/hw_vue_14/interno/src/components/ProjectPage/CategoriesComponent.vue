@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       categories: ["Bathroom", "Bed Room", "Kitchen", "Living Area"],
-      selected: 2,
+      selected: 1,
     };
   },
 

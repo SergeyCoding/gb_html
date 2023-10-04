@@ -24,7 +24,7 @@
             <p>Lorem Ipsum is not simply random text. It has roots in a piece of classica.</p>
             <div class="blog-page__post-next">
               <p>26 December,2022</p>
-              <a href="blog-details.html">
+              <router-link to="blog-details">
                 <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g id="&#62;">
                     <circle id="Ellipse" cx="26" cy="26.5" r="26" fill="#F4F0EC" />
@@ -38,7 +38,7 @@
                     />
                   </g>
                 </svg>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@
             <p>{{ blog.text }}<br />{{ blog.text2 }}</p>
             <div class="blog__nav">
               <p>26 December,2022</p>
-              <a @click="goToPage('BlogDetails')" href="#">
+              <router-link to="blog-details">
                 <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
                   <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
                   <path
@@ -65,13 +65,14 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
       </section>
       <!--  -->
-      <div class="blog-page__pagination">
+      <PaginationComponent :in-page="currentPage" :total-pages="totalPages" @out-page="outPage"></PaginationComponent>
+      <!-- <div class="blog-page__pagination">
         <div class="pagination">
           <div class="pagination__item">
             <div class="pagination__number">
@@ -137,18 +138,21 @@
             </svg>
           </div>
         </div>
-      </div>
+      </div> -->
     </main>
     <!--  -->
   </div>
 </template>
 
 <script>
+import PaginationComponent from "../PaginationComponent.vue";
+
 export default {
   name: "BlogPageComponent",
-
   data() {
     return {
+      currentPage: 1,
+      totalPages: 9,
       blogs: [
         {
           img: require("@/assets/img/blog01.png"),
@@ -201,14 +205,13 @@ export default {
       ],
     };
   },
-
   mounted() {},
-
   methods: {
-    goToPage(page) {
-      this.$emit("change-page", page);
+    outPage(page) {
+      this.currentPage = Number(page.page);
     },
   },
+  components: { PaginationComponent },
 };
 </script>
 
