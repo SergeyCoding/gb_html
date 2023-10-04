@@ -1,8 +1,8 @@
 <template>
   <div class="pagination">
-    <div class="pagination__item" v-for="(item, index) in items" :key="index">
+    <div class="pagination__item" v-for="(item, index) in items" :key="index" @click="changePage(item)">
       <div class="pagination__number">
-        <p>{{ item.page }}</p>
+        <p v-if="item.type !== 'next'">{{ item.page }}</p>
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -20,6 +20,7 @@
         height="52"
         viewBox="0 0 53 52"
         fill="none"
+        :style="{ cursor: 'auto' }"
         v-if="item.type === 'normal'"
       >
         <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
@@ -51,7 +52,6 @@ export default {
   props: {
     totalPages: Number,
     inPage: Number,
-    outPage: Number,
   },
 
   data() {
@@ -61,27 +61,51 @@ export default {
   mounted() {},
   computed: {
     items() {
-      console.log("this.inPage", this.inPage);
-      if (this.totalPages <= 5) {
+      // if (this.totalPages <= 5) {
+      //   const result = [];
+      //   for (let i = 1; i <= this.totalPages; i++) {
+      //     if (i === this.inPage) {
+      //       result.push({ page: "0" + i, type: "current" });
+      //     } else {
+      //       result.push({ page: "0" + i, type: "normal" });
+      //     }
+      //   }
+      //   return result;
+      // }
+
+      if (true) {
         const result = [];
-        for (let i = 1; i <= this.totalPages; i++) {
+
+        let first = Math.max(this.inPage - 2, 1);
+        const last = Math.min(first + 4, this.totalPages);
+        first = Math.max(last - 4, 1);
+
+        for (let i = first; i <= last; i++) {
           if (i === this.inPage) {
-            result.push({ page: "0" + i, type: "current" });
+            result.push({ page: i <= 9 ? "0" + i : i, type: "current" });
           } else {
-            result.push({ page: "0" + i, type: "normal" });
+            result.push({ page: i <= 9 ? "0" + i : i, type: "normal" });
           }
         }
+
+        if (last < this.totalPages) {
+          result.push({ page: "0" + Math.min(this.inPage + 2, last), type: "next" });
+        }
+
         return result;
       }
-      return [
-        { page: "01", type: "current" },
-        { page: "02", type: "normal" },
-        { page: "", type: "next" },
-      ];
     },
   },
 
-  methods: {},
+  methods: {
+    changePage(page) {
+      if (page.type === "current") {
+        return;
+      }
+
+      this.$emit("out-page", page);
+    },
+  },
 };
 </script>
 

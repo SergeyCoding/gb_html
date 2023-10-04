@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <BodyContent>
-      <Header @change-page="onChangePage"></Header>
+      <Header></Header>
       <router-view></router-view>
       <Footer></Footer>
     </BodyContent>
