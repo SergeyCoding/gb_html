@@ -8,7 +8,7 @@
         <h2 class="title">{{ title }}</h2>
         <p class="text">{{ breadcrumbs }}</p>
       </div>
-      <a href="#">
+      <router-link to="project-details">
         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
           <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
           <path
@@ -19,7 +19,7 @@
             stroke-linejoin="round"
           />
         </svg>
-      </a>
+      </router-link>
     </div>
   </div>
 </template>
