@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HomePageComponent from "@/components/HomPage/HomePageComponent.vue";
 import ProjectPageComponent from "@/components/ProjectPage/ProjectPageComponent.vue";
-import ProjectDetailsComponent from "@/components/ProjectDetailsPage/ProjectDetailsPageComponent.vue";
+import ProjectDetailsPageComponent from "@/components/ProjectDetailsPage/ProjectDetailsPageComponent.vue";
 import BlogPageComponent from "@/components/BlogPage/BlogPageComponent.vue";
 import BlogDetailsPageComponent from "@/components/BlogDetailsPage/BlogDetailsPageComponent.vue";
 
@@ -15,9 +15,9 @@ const routes = [
     component: HomePageComponent,
   },
   {
-    path: "/projectdetails",
+    path: "/project-details",
     name: "projectdetails",
-    component: ProjectDetailsComponent,
+    component: ProjectDetailsPageComponent,
   },
   {
     path: "/project",
@@ -25,7 +25,7 @@ const routes = [
     component: ProjectPageComponent,
   },
   {
-    path: "/blogdetails",
+    path: "/blog-details",
     name: "blogdetails",
     component: BlogDetailsPageComponent,
   },
