@@ -2,21 +2,19 @@
   <div class="header">
     <div class="header__logo">
       <div class="header__logo_img">
-        <img src="@/assets/img/Logo.png" alt="" />
+        <router-link to="/">
+          <img src="@/assets/img/Logo.png" alt="" />
+        </router-link>
       </div>
-      <p class="header__caption">Interno</p>
+      <router-link to="/">
+        <p class="header__caption">Interno</p>
+      </router-link>
     </div>
 
     <menu class="menu">
-      <a @click="goToPage('Home')" href="#">
-        <p>Home</p>
-      </a>
-      <a @click="goToPage('Project')" href="#">
-        <p>Project</p>
-      </a>
-      <a @click="goToPage('Blog')" href="#">
-        <p>Blog</p>
-      </a>
+      <router-link to="/home"> <p>Home</p> </router-link>
+      <router-link to="/project"><p>Project</p> </router-link>
+      <router-link to="/blog"><p>Blog</p></router-link>
     </menu>
   </div>
 </template>
@@ -24,18 +22,6 @@
 <script>
 export default {
   name: "HeaderComponent",
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {
-    goToPage(page) {
-      this.$emit("change-page", page);
-    },
-  },
 };
 </script>
 

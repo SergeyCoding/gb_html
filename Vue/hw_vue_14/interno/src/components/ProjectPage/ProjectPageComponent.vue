@@ -14,7 +14,7 @@
     <!--  -->
     <main class="project-page">
       <ProjectsListComponent :current-projects="currentCategory" />
-      <PaginationComponent></PaginationComponent>
+      <PaginationComponent total-pages="3" in-page="2" :out-page="outPage"></PaginationComponent>
     </main>
   </div>
 </template>
@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       currentCategory: "",
+      outPage: 0,
     };
   },
   mounted() {},
