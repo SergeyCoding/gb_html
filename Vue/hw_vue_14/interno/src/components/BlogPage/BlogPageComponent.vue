@@ -71,7 +71,8 @@
         </div>
       </section>
       <!--  -->
-      <div class="blog-page__pagination">
+      <PaginationComponent :in-page="currentPage" :total-pages="totalPages" @out-page="outPage"></PaginationComponent>
+      <!-- <div class="blog-page__pagination">
         <div class="pagination">
           <div class="pagination__item">
             <div class="pagination__number">
@@ -137,18 +138,21 @@
             </svg>
           </div>
         </div>
-      </div>
+      </div> -->
     </main>
     <!--  -->
   </div>
 </template>
 
 <script>
+import PaginationComponent from "../PaginationComponent.vue";
+
 export default {
   name: "BlogPageComponent",
-
   data() {
     return {
+      currentPage: 1,
+      totalPages: 9,
       blogs: [
         {
           img: require("@/assets/img/blog01.png"),
@@ -201,14 +205,16 @@ export default {
       ],
     };
   },
-
   mounted() {},
-
   methods: {
     goToPage(page) {
       this.$emit("change-page", page);
     },
+    outPage(page) {
+      this.currentPage = Number(page.page);
+    },
   },
+  components: { PaginationComponent },
 };
 </script>
 

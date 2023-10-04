@@ -61,39 +61,25 @@ export default {
   mounted() {},
   computed: {
     items() {
-      // if (this.totalPages <= 5) {
-      //   const result = [];
-      //   for (let i = 1; i <= this.totalPages; i++) {
-      //     if (i === this.inPage) {
-      //       result.push({ page: "0" + i, type: "current" });
-      //     } else {
-      //       result.push({ page: "0" + i, type: "normal" });
-      //     }
-      //   }
-      //   return result;
-      // }
+      const result = [];
 
-      if (true) {
-        const result = [];
+      let first = Math.max(this.inPage - 2, 1);
+      const last = Math.min(first + 4, this.totalPages);
+      first = Math.max(last - 4, 1);
 
-        let first = Math.max(this.inPage - 2, 1);
-        const last = Math.min(first + 4, this.totalPages);
-        first = Math.max(last - 4, 1);
-
-        for (let i = first; i <= last; i++) {
-          if (i === this.inPage) {
-            result.push({ page: i <= 9 ? "0" + i : i, type: "current" });
-          } else {
-            result.push({ page: i <= 9 ? "0" + i : i, type: "normal" });
-          }
+      for (let i = first; i <= last; i++) {
+        if (i === this.inPage) {
+          result.push({ page: i <= 9 ? "0" + i : i, type: "current" });
+        } else {
+          result.push({ page: i <= 9 ? "0" + i : i, type: "normal" });
         }
-
-        if (last < this.totalPages) {
-          result.push({ page: "0" + Math.min(this.inPage + 2, last), type: "next" });
-        }
-
-        return result;
       }
+
+      if (last < this.totalPages) {
+        result.push({ page: "0" + Math.min(this.inPage + 2, last), type: "next" });
+      }
+
+      return result;
     },
   },
 
