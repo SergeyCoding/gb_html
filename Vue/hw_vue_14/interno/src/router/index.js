@@ -30,32 +30,25 @@ const routes = [
     component: BlogDetailsPageComponent,
   },
   {
-    path: '/gb_html/Vue/hw_vue_14/go/blog',
+    path: '/blog',
     name: 'blog',
     component: BlogPageComponent,
   },
+  // {
+  //   path: '/ind',
+  //   name: 'ind',
+  //   component: HomePageComponent,
+  // },
   {
     path: '/',
     name: 'root',
     component: HomePageComponent,
   },
-
-  // {
-  //   path: "/about",
-  //   name: "about",
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: function () {
-  //     return import(/* webpackChunkName: "about" */ "../views/AboutView.vue");
-  //   },
-  // },
 ];
 
 const router = new VueRouter({
   mode: 'history',
-  // BASE_URL: 'gb_html/Vue/hw_vue_14/go',
-  base: '/gb_html/Vue/hw_vue_14/go/',
+  // base: 'Vue/hw_vue_14/go',
   routes,
   scrollBehavior() {
     document.getElementById('app').scrollIntoView({ behavior: 'smooth' });

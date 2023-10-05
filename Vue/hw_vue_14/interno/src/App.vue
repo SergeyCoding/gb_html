@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import BodyContent from "./components/BodyContentComponent.vue";
-import Header from "./components/BodyContent/HeaderComponent.vue";
-import Footer from "./components/BodyContent/FooterComponent.vue";
+import BodyContent from './components/BodyContentComponent.vue';
+import Header from './components/BodyContent/HeaderComponent.vue';
+import Footer from './components/BodyContent/FooterComponent.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     BodyContent,
     Header,
@@ -25,5 +25,5 @@ export default {
 
 <style lang="scss">
 // @import "./scss/test";
-@import "./scss/style";
+@import './scss/style';
 </style>
