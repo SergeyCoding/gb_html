@@ -1,8 +1,13 @@
 <template>
   <div class="switcher">
-    <div class="circle"></div>
-    <div class="circle selected"></div>
-    <div class="circle"></div>
+    <div
+      class="circle"
+      v-for="i in [1, 2, 3]"
+      :class="{ selected: switcherSelected === i }"
+      @click="changePage(i)"
+    ></div>
+    <!-- <div class="circle selected"></div>
+    <div class="circle"></div> -->
   </div>
 </template>
 
@@ -11,12 +16,45 @@ export default {
   name: "SwitcherComponent",
 
   data() {
-    return {};
+    return {
+      switcherSelected: 1,
+      interval: null,
+      timeout: null,
+    };
   },
 
-  mounted() {},
+  mounted() {
+    this.StartSwith();
+  },
 
-  methods: {},
+  methods: {
+    StartSwith() {
+      this.interval = setInterval(() => {
+        if (this.switcherSelected === 3) {
+          this.switcherSelected = 1;
+        } else {
+          this.switcherSelected++;
+        }
+        this.$emit("switch", this.switcherSelected);
+      }, 3000);
+    },
+    changePage(page) {
+      if (this.interval) {
+        clearInterval(this.interval);
+        this.interval = null;
+      }
+
+      if (this.timeout) {
+        clearTimeout(this.timeout);
+      }
+
+      this.timeout = setTimeout(this.StartSwith, 6000);
+
+      this.switcherSelected = page;
+
+      this.$emit("switch", this.switcherSelected);
+    },
+  },
 };
 </script>
 
