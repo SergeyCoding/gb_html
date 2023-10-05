@@ -54,8 +54,8 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  BASE_URL: 'gb_html/Vue/hw_vue_14/go',
-  base: process.env.BASE_URL,
+  // BASE_URL: 'gb_html/Vue/hw_vue_14/go',
+  base: window.location.pathname,
   routes,
   scrollBehavior() {
     document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
