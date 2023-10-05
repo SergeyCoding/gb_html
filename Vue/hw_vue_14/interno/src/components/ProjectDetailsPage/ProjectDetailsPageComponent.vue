@@ -6,20 +6,15 @@
       <div class="project-details-page__text">
         <p class="project-details-page__title">{{ GET_CURRENT_TITLE }}</p>
         <p class="project-details-page__content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam
-          sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi
-          fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo. In nec sem
-          suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id,
-          pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in
-          viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.
+          {{ GET_CURRENT_CONTENT }}
         </p>
       </div>
       <div class="project-details-page__img">
-        <img src="@/assets/img/project-details-photo01.png" alt="" />
+        <img :src="img" alt="" />
       </div>
       <div class="project-details-page__slider">
         <div class="project-details-page__switcher">
-          <SwitcherComponent></SwitcherComponent>
+          <SwitcherComponent @switch="onSwith"></SwitcherComponent>
         </div>
       </div>
     </main>
@@ -28,18 +23,26 @@
 
 <script>
 import SwitcherComponent from "./SwitcherComponent.vue";
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 
 export default {
   name: "ProjectDetailsPageComponent",
   data() {
-    return {};
+    return {
+      img: require("@/assets/img/project-details-photo02.png"),
+    };
   },
   mounted() {},
-  methods: {},
+  methods: {
+    onSwith(switcher) {
+      this.SET_CURRENT_ID(switcher - 1);
+      this.img = require("@/assets/img/" + this.GET_CURRENT_IMAGE);
+    },
+    ...mapMutations(["SET_CURRENT_ID"]),
+  },
   components: { SwitcherComponent },
   computed: {
-    ...mapGetters(["GET_CURRENT_TITLE", "GET_CURRENT_CONTENT"]),
+    ...mapGetters(["GET_CURRENT_TITLE", "GET_CURRENT_CONTENT", "GET_CURRENT_IMAGE"]),
   },
 };
 </script>
