@@ -6,20 +6,15 @@
       <div class="project-details-page__text">
         <p class="project-details-page__title">{{ GET_CURRENT_TITLE }}</p>
         <p class="project-details-page__content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam
-          sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi
-          fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo. In nec sem
-          suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id,
-          pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in
-          viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.
+          {{ GET_CURRENT_CONTENT }}
         </p>
       </div>
       <div class="project-details-page__img">
-        <img src="@/assets/img/project-details-photo01.png" alt="" />
+        <img :src="img" alt="" />
       </div>
       <div class="project-details-page__slider">
         <div class="project-details-page__switcher">
-          <SwitcherComponent></SwitcherComponent>
+          <SwitcherComponent @switch="onSwith"></SwitcherComponent>
         </div>
       </div>
     </main>
@@ -33,10 +28,26 @@ import { mapGetters } from "vuex";
 export default {
   name: "ProjectDetailsPageComponent",
   data() {
-    return {};
+    return {
+      img: require("@/assets/img/project-details-photo02.png"),
+    };
   },
   mounted() {},
-  methods: {},
+  methods: {
+    onSwith(switcher) {
+      console.log("switcher", switcher);
+      switch (switcher) {
+        case 2:
+          this.img = require("@/assets/img/project-details-photo02.png");
+          return;
+        case 3:
+          this.img = require("@/assets/img/project-details-photo03.png");
+          return;
+        default:
+          this.img = require("@/assets/img/project-details-photo01.png");
+      }
+    },
+  },
   components: { SwitcherComponent },
   computed: {
     ...mapGetters(["GET_CURRENT_TITLE", "GET_CURRENT_CONTENT"]),

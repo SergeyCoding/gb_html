@@ -6,7 +6,8 @@
         <div class="main__banner-intro">
           <h1>Let Your Home Be Unique</h1>
           <p>There are many variations of the passages of lorem Ipsum fromavailable, majority.</p>
-          <button class="main__button">
+
+          <router-link to="project" tag="button" class="main__button">
             <p>Get Started</p>
             <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -18,7 +19,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </button>
+          </router-link>
         </div>
       </div>
 
@@ -64,7 +65,7 @@
       </div>
     </main>
     <!-- counter -->
-    <CounterComponent></CounterComponent>
+    <CounterComponent />
 
     <!-- blog  -->
     <BlogComponent />
