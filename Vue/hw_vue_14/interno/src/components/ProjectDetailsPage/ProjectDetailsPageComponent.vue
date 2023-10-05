@@ -23,7 +23,7 @@
 
 <script>
 import SwitcherComponent from "./SwitcherComponent.vue";
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 
 export default {
   name: "ProjectDetailsPageComponent",
@@ -35,22 +35,14 @@ export default {
   mounted() {},
   methods: {
     onSwith(switcher) {
-      console.log("switcher", switcher);
-      switch (switcher) {
-        case 2:
-          this.img = require("@/assets/img/project-details-photo02.png");
-          return;
-        case 3:
-          this.img = require("@/assets/img/project-details-photo03.png");
-          return;
-        default:
-          this.img = require("@/assets/img/project-details-photo01.png");
-      }
+      this.SET_CURRENT_ID(switcher - 1);
+      this.img = require("@/assets/img/" + this.GET_CURRENT_IMAGE);
     },
+    ...mapMutations(["SET_CURRENT_ID"]),
   },
   components: { SwitcherComponent },
   computed: {
-    ...mapGetters(["GET_CURRENT_TITLE", "GET_CURRENT_CONTENT"]),
+    ...mapGetters(["GET_CURRENT_TITLE", "GET_CURRENT_CONTENT", "GET_CURRENT_IMAGE"]),
   },
 };
 </script>

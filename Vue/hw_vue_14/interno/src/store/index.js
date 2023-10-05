@@ -14,7 +14,7 @@ export default new Vuex.Store({
       suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id,
       pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in
       viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.`,
-        img: "project-details-photo01",
+        img: "project-details-photo01.png",
       },
       {
         title: "Minimal Look Bedrooms 2",
@@ -24,7 +24,7 @@ export default new Vuex.Store({
       suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id,
       pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in
       viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.`,
-        img: "project-details-photo02",
+        img: "project-details-photo02.png",
       },
       {
         title: "Minimal Look Bedrooms 3",
@@ -34,7 +34,7 @@ export default new Vuex.Store({
       suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id,
       pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in
       viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.`,
-        img: "project-details-photo03",
+        img: "project-details-photo03.png",
       },
     ],
     currentProjectId: 0,
