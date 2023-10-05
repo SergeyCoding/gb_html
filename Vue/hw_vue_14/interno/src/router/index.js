@@ -1,42 +1,42 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import HomePageComponent from "@/components/HomPage/HomePageComponent.vue";
-import ProjectPageComponent from "@/components/ProjectPage/ProjectPageComponent.vue";
-import ProjectDetailsPageComponent from "@/components/ProjectDetailsPage/ProjectDetailsPageComponent.vue";
-import BlogPageComponent from "@/components/BlogPage/BlogPageComponent.vue";
-import BlogDetailsPageComponent from "@/components/BlogDetailsPage/BlogDetailsPageComponent.vue";
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import HomePageComponent from '@/components/HomPage/HomePageComponent.vue';
+import ProjectPageComponent from '@/components/ProjectPage/ProjectPageComponent.vue';
+import ProjectDetailsPageComponent from '@/components/ProjectDetailsPage/ProjectDetailsPageComponent.vue';
+import BlogPageComponent from '@/components/BlogPage/BlogPageComponent.vue';
+import BlogDetailsPageComponent from '@/components/BlogDetailsPage/BlogDetailsPageComponent.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/home",
-    name: "home",
+    path: '/home',
+    name: 'home',
     component: HomePageComponent,
   },
   {
-    path: "/project-details",
-    name: "projectdetails",
+    path: '/project-details',
+    name: 'projectdetails',
     component: ProjectDetailsPageComponent,
   },
   {
-    path: "/project",
-    name: "project",
+    path: '/project',
+    name: 'project',
     component: ProjectPageComponent,
   },
   {
-    path: "/blog-details*",
-    name: "blogdetails",
+    path: '/blog-details*',
+    name: 'blogdetails',
     component: BlogDetailsPageComponent,
   },
   {
-    path: "/blog",
-    name: "blog",
+    path: '/blog',
+    name: 'blog',
     component: BlogPageComponent,
   },
   {
-    path: "/",
-    name: "root",
+    path: '/',
+    name: 'root',
     component: HomePageComponent,
   },
 
@@ -53,11 +53,12 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
+  BASE_URL: 'gb_html/Vue/hw_vue_14/go',
   base: process.env.BASE_URL,
   routes,
   scrollBehavior() {
-    document.getElementById("app").scrollIntoView({ behavior: "smooth" });
+    document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
   },
 });
 
