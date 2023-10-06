@@ -34,13 +34,8 @@ const routes = [
     name: 'blog',
     component: BlogPageComponent,
   },
-  // {
-  //   path: '/ind',
-  //   name: 'ind',
-  //   component: HomePageComponent,
-  // },
   {
-    path: '/',
+    path: '*',
     name: 'root',
     component: HomePageComponent,
   },
@@ -48,7 +43,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  // base: 'Vue/hw_vue_14/go',
+  base: 'Vue/hw_vue_14/go',
   routes,
   scrollBehavior() {
     document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
