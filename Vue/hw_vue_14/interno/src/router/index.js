@@ -53,7 +53,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   // base: '/gb_html/Vue/hw_vue_14/go/',
   routes,
