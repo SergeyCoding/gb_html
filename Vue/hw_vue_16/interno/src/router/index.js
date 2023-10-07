@@ -5,6 +5,7 @@ import ProjectPageComponent from '@/components/ProjectPage/ProjectPageComponent.
 import ProjectDetailsPageComponent from '@/components/ProjectDetailsPage/ProjectDetailsPageComponent.vue';
 import BlogPageComponent from '@/components/BlogPage/BlogPageComponent.vue';
 import BlogDetailsPageComponent from '@/components/BlogDetailsPage/BlogDetailsPageComponent.vue';
+import Page404Component from '@/components/Page404/Page404Component.vue';
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,12 @@ const routes = [
     name: 'root',
     component: HomePageComponent,
   },
+  {
+    path: '/404',
+    name: 'Page404',
+    component: Page404Component,
+  },
+  { path: '*', redirect: '/404' },
 
   // {
   //   path: "/about",
@@ -53,13 +60,13 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   // base: '/gb_html/Vue/hw_vue_14/go/',
   routes,
-  scrollBehavior() {
-    document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
-  },
+  // scrollBehavior() {
+  //   document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
+  // },
 });
 
 export default router;
