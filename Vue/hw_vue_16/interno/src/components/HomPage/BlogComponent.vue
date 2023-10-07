@@ -15,7 +15,7 @@
         <p>{{ blog.text }}<br />{{ blog.text2 }}</p>
         <div class="blog__nav">
           <p>26 December,2022</p>
-          <a href="blog-details.html">
+          <router-link to="blog-details">
             <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
               <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
               <path
@@ -26,7 +26,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </a>
+          </router-link>
         </div>
       </div>
     </div>
@@ -35,33 +35,33 @@
 
 <script>
 export default {
-  name: "BlogComponent",
+  name: 'BlogComponent',
 
   data() {
     return {
       blogs: [
         {
-          img: require("@/assets/img/blog01.png"),
-          alt: "blog1",
-          text: "Let’s Get Solution For Building Construction",
+          img: require('@/assets/img/blog01.png'),
+          alt: 'blog1',
+          text: 'Let’s Get Solution For Building Construction',
           text2: `Work`,
-          data: "26 December,2022",
+          data: '26 December,2022',
           isSelected: false,
         },
         {
-          img: require("@/assets/img/blog02.png"),
-          alt: "blog2",
-          text: "Low Cost Latest Invented Interior Designing",
-          text2: "Ideas.",
-          data: "22 December,2022",
+          img: require('@/assets/img/blog02.png'),
+          alt: 'blog2',
+          text: 'Low Cost Latest Invented Interior Designing',
+          text2: 'Ideas.',
+          data: '22 December,2022',
           isSelected: true,
         },
         {
-          img: require("@/assets/img/blog03.png"),
-          alt: "blog3",
-          text: "Best For Any Office & Business Interior",
-          text2: "Solution",
-          data: "25 December,2022",
+          img: require('@/assets/img/blog03.png'),
+          alt: 'blog3',
+          text: 'Best For Any Office & Business Interior',
+          text2: 'Solution',
+          data: '25 December,2022',
           isSelected: false,
         },
       ],
@@ -71,9 +71,9 @@ export default {
   computed: {
     isSelected(v) {
       if (v) {
-        return "blog__item_selected";
+        return 'blog__item_selected';
       }
-      return "";
+      return '';
     },
   },
 };
